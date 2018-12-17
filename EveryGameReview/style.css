@@ -1,0 +1,78 @@
+body {
+    background: #ffffe0;
+    text-align: center;
+}
+
+div {
+    height: 200px; /* or whatever width you want. */
+    display: block
+}
+
+div#spintext h1 {
+    text-align: center;
+    color: orange;
+    margin: 12.5%;
+    font-size: 300%;
+    animation: pulse 1s ease-in-out infinite, rotate 1s linear infinite;
+}
+
+p, h1 {
+    text-align: center;
+    font-size: 150%;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+button {
+    margin: 10px;
+}
+
+#review_text {
+    font-size: 400%;
+}
+
+#rating {
+    font-size: 800%;
+}
+
+#zany {
+   font-size: 200%; 
+   animation: bulge 1s ease-in-out infinite;
+}
+
+#review {
+    display: none;
+}
+
+@keyframes pulse {
+    0% {color: orange} 
+    50% {color: orangered}
+    100% {color: orange}
+}
+
+@keyframes bulge {
+    0% {font-size: 200%}
+    50% {font-size: 400%}
+    100% {font-size: 200%}
+}
+@keyframes rotate {
+    0% {
+        transform: rotateZ(45deg);
+        font-size: 300%
+    }
+    25% {
+        transform: rotateZ(0deg);
+        font-size: 400%;
+    }
+    50% {
+        transform: rotateZ(-45deg);
+        font-size: 300%
+    }
+    75% {
+        transform: rotateZ(0deg);
+        font-size: 400%;
+    }
+    100% {
+        transform: rotateZ(45deg);
+        font-size: 300%;
+    }
+}
