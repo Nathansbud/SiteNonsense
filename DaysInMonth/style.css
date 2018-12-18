@@ -1,0 +1,19 @@
+body {
+    background-color:  #120E09;
+    color: #e5e5e5;
+    text-align: center;
+    padding: 22%;
+}
+
+#text, select {
+    font-size: 150%
+}
+
+a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.leap {
+    visibility: hidden;
+}
