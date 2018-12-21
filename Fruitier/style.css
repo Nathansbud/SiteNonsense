@@ -1,0 +1,47 @@
+body {
+    text-align: center;
+    background-color: grey;
+    margin: auto;
+}
+
+a {
+    color: lightblue;
+    text-decoration-style: dotted;
+}
+
+div {
+    padding: 50px;
+    border-bottom: 4px solid grey;
+}
+
+div.intro:nth-of-type(odd) {
+    background-color: black;
+    color: white;
+} 
+
+div.intro:nth-of-type(even) {
+    background-color: white;
+    color: black;
+}
+
+h1, .crucial, .footnote-star {
+    color: red;
+}
+
+h1::before {
+    content: "[ ";
+}
+
+h1::after {
+    content: " ]"
+}
+
+.footnote {
+    text-align: left;
+}
+
+.footnote::before {
+    content: "*";
+    color: red;    
+}
+
