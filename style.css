@@ -1,1 +1,12 @@
-/* maybe */
+body {
+    background-color: black;
+    color: white;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+a {
+    color: lightblue;
+}

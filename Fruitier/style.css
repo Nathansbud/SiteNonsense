@@ -9,7 +9,7 @@ a {
     text-decoration-style: dotted;
 }
 
-div {
+div.intro, div.tl {
     padding: 50px;
     border-bottom: 4px solid grey;
 }
@@ -43,5 +43,19 @@ h1::after {
 .footnote::before {
     content: "*";
     color: red;    
+}
+
+ul {
+    list-style-position: inside;
+}
+
+li {
+    padding-bottom: 5px;
+}
+
+.center{
+    width: 40%;
+    margin: 0 auto;
+    text-align:left;
 }
 
