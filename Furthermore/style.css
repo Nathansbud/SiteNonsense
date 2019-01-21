@@ -1,0 +1,35 @@
+body {
+    background-color: #eeeeee
+}
+div {
+    padding-top: 10%;
+    padding-bottom: auto;
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 50px 100px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#furthermore {
+    background: #fad3d9;
+    border: 2px solid red;
+    color: red;
+}
+
+#additionally {
+    background: rgb(182, 248, 182);
+    border: 2px solid darkgreen;
+    color: darkgreen;
+}
+
+#moreover {
+    border: 2px solid darkblue;
+    background: rgb(242, 248, 250);
+    color: darkblue;
+}
