@@ -1,5 +1,38 @@
+/*
+    EQUATIONS:
+    
+    MATH: 
+        Probability:
+            - Binompdf/Cdf: [i: 0-n]∑ (nCi)(S)^(n-i)*(F)^(i), where S = Success and F = Failure
+    
+    PHYSICS:
+        Waves:
+            Simple Harmonic Motion:
+                - Angular Frequency (ω): 2π/T, where T = Period
+                - Acceleration = -ω^2 x
+            Resolution:
+                - Rayleigh Criteria: θ = 1.22λ/b, where θ = Min. Resolve Angle, λ = WL & b = Slit Width
+                - Resolving Factor: R = λ/∆λ = mN
+
+*/
+
+
+
+
+//Navbar
+
+let navMath = document.getElementById("nav_math");
+let navPhysics = document.getElementById("nav_physics");
+let divMath = document.getElementById("math");
+let divPhysics = document.getElementById("physics")
+
+//Probability Cells
+
 let binompdf = document.getElementById("binompdf");
 let binomcdf = document.getElementById("binomcdf");
+
+//Binompdf/cdf Form 
+
 let rate = document.getElementById("probability_success");
 let trialInput = document.getElementById("trial_input");
 let cdfCheck = document.getElementById("check_cdf");
@@ -54,6 +87,20 @@ function calculateBinompdf(trials, success, value) {
 function calculateBinomcdf(trials, success, min, max) {
     return calculateBinomial(trials, success, min, max);
 }
+
+//Navbar Listeners
+
+navMath.addEventListener("click", function() {
+    divMath.style.display = "block";
+    divPhysics.style.display = "none";
+})
+
+navPhysics.addEventListener("click", function() {
+    divPhysics.style.display = "block";
+    divMath.style.display = "none";
+})
+
+//Probability Listeners
 
 cdfCheck.addEventListener("change", function (){
     if(maxForm.style.display == "inline") {
