@@ -250,6 +250,7 @@ let tv = [
     {"name":"Haikyuu!!", "total_seasons":"3", "in_progress":"", "unwatched":""},
     {"name":"How I Met Your Mother", "total_seasons":"9", "in_progress":"9", "unwatched":""},
     {"name":"It's Always Sunny in Philadelphia", "total_seasons":"14", "in_progress":"4", "unwatched":[5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+    {"name":"Jojo's Bizarre Adventure", "total_seasons":"4", "in_progress":"4", "unwatched":""},
     {"name":"Master of None", "total_seasons":"2", "in_progress":"", "unwatched":""},
     {"name":"Mob Psycho 100", "total_seasons":"2", "in_progress":"", "unwatched":""},
     {"name":"Modern Family", "total_seasons":"11", "in_progress":"", "unwatched":[7, 8, 9, 10, 11]},
@@ -264,6 +265,7 @@ let tv = [
     {"name":"Stranger Things", "total_seasons":"3", "in_progress":"", "unwatched":""},
     {"name":"Steins;Gate", "total_seasons":"1", "in_progress":"", "unwatched":""},
     {"name":"Steins;Gate 0", "total_seasons":"1", "in_progress":"", "unwatched":""},
+    {"name":"That Time I Got Reincarnated as a Slime", "total_seasons":"1", "in_progress":"", "unwatched":""},
     {"name":"The Good Place", "total_seasons":"3", "in_progress":"", "unwatched":""},
     {"name":"Unbreakable Kimmy Schmidt", "total_seasons":"5", "in_progress":"1", "unwatched":[2, 3, 4, 5]}
 ]
