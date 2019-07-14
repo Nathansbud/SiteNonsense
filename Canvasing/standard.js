@@ -24,8 +24,11 @@ function resetCanvas() {
     ctx.clearRect(0, 0, ce.width, ce.height);
 }
 
-function background(color) { //Can pass in CSS colorval or hex
+function background(color, nonCanvas=true) { //Can pass in CSS colorval or hex
     ce.style.background = color;
+    if(nonCanvas) {
+        document.querySelector("body").style.background = color;
+    }
 }
 
 function fill(color) {

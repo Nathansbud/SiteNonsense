@@ -42,6 +42,10 @@ window.addEventListener('mousemove', function(event) {
     } 
 })
 
+window.addEventListener('keydown', function(key) {
+    if(key.keyCode == 8) points = []
+})
+
 ce.addEventListener('click', function() {
     mouseDown = !mouseDown;
 }) 

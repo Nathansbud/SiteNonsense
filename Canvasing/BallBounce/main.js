@@ -1,5 +1,4 @@
 //Not sure the typical convention on this, sharing classes -> main file via the HTML file which seems a little silly but so be it
-
 let balls = [];
 
 function randomHex() { //https://www.paulirish.com/2009/random-hex-color-code-snippets/
