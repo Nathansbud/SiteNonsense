@@ -38,11 +38,18 @@ class TextObj {
 
     draw() {
         if(this.centered) ctx.textAlign = "center";
-        ctx.font = this.markup + " " + this.size + " " + this.font;
+        ctx.font = this.getFullFont();
         if(this.filled) {
             ctx.fillStyle = createRainbowGradient(this.x - 0.5*ctx.measureText(this.text).width, 0, this.x + 0.5*ctx.measureText(this.text).width, 0)
             ctx.fillText(this.text, this.x, this.y) 
         } else ctx.strokeText(this.text, this.x, this.y)
+    }
+
+    getText() {
+        return this.text;
+    }
+    setText(text) {
+        this.text = text;
     }
 
     getX() {
@@ -74,6 +81,10 @@ class TextObj {
     setFilled(filled) {
         this.filled = filled;
     }
+
+    getFullFont() {
+        return this.markup + " " + this.size + " " + this.font;        
+    } 
 
     setFontArgs(f) {
         if(f.markup) this.markup = f.markup;
@@ -116,11 +127,26 @@ function createRainbowGradient(xs, ys, xe, ye, sameEnds=false, offset=-1) {
     } else { //LG with same color ends
         for(let i = 0; i < (rainbowColors.length+1); i++) {
             gradient.addColorStop(i/rainbowColors.length, rainbowColors[(i+sp)%rainbowColors.length])
-            console.log(rainbowColors[(i+sp)%rainbowColors.length])
         }
     }
 
     return gradient;
+}
+
+function drawStadium(x, y, w, h, fill=true) { //Pill shape
+    if(fill) {
+        ctx.fillStyle = fill;
+        ctx.fill();
+    }
+    
+    ctx.beginPath();
+    ctx.fillRect(x - 0.5*w, y - 0.5*h, length, h);
+    ctx.closePath();
+    
+    ctx.beginPath();
+    ctx.arc(x - 0.5*w, (y), h/2, Math.PI/2, Math.PI*(3/2))
+    ctx.arc(x + 0.5*w, (y), h/2, -Math.PI/2, Math.PI/2)
+    ctx.stroke();
 }
 
 function setup() {
@@ -131,8 +157,53 @@ function update() {
 
 }
 
+function textWidth(textObj) {
+    let font = ctx.font;
+    
+    let measureFont = textObj.getFullFont();
+    ctx.font = measureFont;
+    let tw = ctx.measureText(textObj.getText()).width; 
+    ctx.font = font;
+    
+    return tw;
+}
+
+function textHeight(textObj) { //https://stackoverflow.com/questions/46487145/canvas-speechbubble-created-in-javascript-measuretext-height
+    let font = ctx.font;
+
+    let measureFont = textObj.getFullFont();
+    ctx.font = measureFont;
+
+    let el = document.createElement('div');
+    let th;
+
+    el.style.cssText = "position:fixed;padding:0;left:-9999px;top:-9999px;font:" + measureFont;
+    el.textContent = textObj.getText();
+  
+    document.body.appendChild(el); 
+    th = parseInt(getComputedStyle(el).getPropertyValue('height'), 10);
+    document.body.removeChild(el);
+
+    ctx.font = font;
+    
+    
+    return th
+  }
+
+
+
+
 function draw() {
     resetCanvas();
+    drawStadium(width/2, height/4 - textHeight(header), textWidth(header), textHeight(header),
+                createRainbowGradient(
+                    width/2 - 0.5*textWidth(header) - height/10, 0, 
+                    width/2 - 0.5*textWidth(header) - height/10 + textWidth(header) + 2*height/10, 0, 
+                    true    
+                ))
+
+    ctx.fillStyle = "black";
+    ctx.fillRect(header.getX() - 0.5*textWidth(header), header.getY() - textHeight(header), textWidth(header), textHeight(header));
     header.draw();
     subheader.draw();
 }
