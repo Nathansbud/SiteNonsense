@@ -26,7 +26,6 @@ class TextObj {
         this.x = x;
         this.y = y;
         this.fill = colors.text;
-        this.filled = true;
         this.centered = true;
         
         this.markup = (fontArgs.markup) ? (fontArgs.markup) : (""); //Bold, italic
@@ -39,7 +38,7 @@ class TextObj {
     draw() {
         if(this.centered) ctx.textAlign = "center";
         ctx.font = this.getFullFont();
-        if(this.filled) {
+        if(this.fill) {
             ctx.fillStyle = createRainbowGradient(this.x - 0.5*ctx.measureText(this.text).width, 0, this.x + 0.5*ctx.measureText(this.text).width, 0)
             ctx.fillText(this.text, this.x, this.y) 
         } else ctx.strokeText(this.text, this.x, this.y)
@@ -93,8 +92,23 @@ class TextObj {
     }
 }
 
+class Slider {
+    constructor(x, y, w, h, fill=false) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.fill = fill;
+    }
+
+    draw() {
+        drawStadium(this.x, this.y, this.w, this.h, this.fill)
+    }
+}
+
 let header = new TextObj("S P C T R M", width/2, height/4, {markup: "", size: "80px", font: "Arial"})
 let subheader = new TextObj("୧[•-•]୨", width/2, height/4+height/10, {markup: "", size: "40px", font: "Arial"})
+let genderSlider = new Slider(width/2, height/2, width/2, height/8, "red");
 
 function updateBounds() {
     ce.width = window.innerWidth
@@ -133,10 +147,9 @@ function createRainbowGradient(xs, ys, xe, ye, sameEnds=false, offset=-1) {
     return gradient;
 }
 
-function drawStadium(x, y, w, h, fill=true) { //Pill shape
+function drawStadium(x, y, w, h, fill=false) { //Pill shape
     if(fill) {
         ctx.fillStyle = fill;
-        ctx.fill();
     }
     
     ctx.beginPath();
@@ -147,6 +160,7 @@ function drawStadium(x, y, w, h, fill=true) { //Pill shape
     ctx.arc(x - 0.5*w, (y), h/2, Math.PI/2, Math.PI*(3/2))
     ctx.arc(x + 0.5*w, (y), h/2, -Math.PI/2, Math.PI/2)
     ctx.stroke();
+    ctx.fill();
 }
 
 function setup() {
@@ -172,38 +186,36 @@ function textHeight(textObj) { //https://stackoverflow.com/questions/46487145/ca
     let font = ctx.font;
 
     let measureFont = textObj.getFullFont();
-    ctx.font = measureFont;
+    var measureDiv = document.createElement("div");
+    measureDiv.innerHTML = textObj.text;
+    measureDiv.style.font = measureFont;
+    measureDiv.style.position = 'absolute';
+    measureDiv.style.top  = '-9999px';
+    measureDiv.style.left = '-9999px';
 
-    let el = document.createElement('div');
-    let th;
-
-    el.style.cssText = "position:fixed;padding:0;left:-9999px;top:-9999px;font:" + measureFont;
-    el.textContent = textObj.getText();
-  
-    document.body.appendChild(el); 
-    th = parseInt(getComputedStyle(el).getPropertyValue('height'), 10);
-    document.body.removeChild(el);
+    document.body.append(measureDiv)
+    var measureHeight = measureDiv.offsetHeight;
+    document.body.removeChild(measureDiv);
 
     ctx.font = font;
     
-    
-    return th
+    return measureHeight;
   }
-
-
-
 
 function draw() {
     resetCanvas();
-    drawStadium(width/2, height/4 - textHeight(header), textWidth(header), textHeight(header),
+    drawStadium(width/2, height/4 - (19/60)*textHeight(header), textWidth(header), (2/3)*textHeight(header),
                 createRainbowGradient(
                     width/2 - 0.5*textWidth(header) - height/10, 0, 
                     width/2 - 0.5*textWidth(header) - height/10 + textWidth(header) + 2*height/10, 0, 
                     true    
                 ))
 
-    ctx.fillStyle = "black";
-    ctx.fillRect(header.getX() - 0.5*textWidth(header), header.getY() - textHeight(header), textWidth(header), textHeight(header));
+     
+
+    genderSlider.draw();    
+    // drawStadium(width/2, height/2, width/2, height/10, "red")
+
     header.draw();
     subheader.draw();
 }
