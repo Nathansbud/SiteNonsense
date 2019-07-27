@@ -216,6 +216,7 @@ let movies = [
     "The Matrix",
     "The Odd Life of Timony Green",
     "The Pacifier",
+    "The Perfect Date",
     "The Polar Express",
     "The Princess Bride",
     "The Princess and the Frog",
@@ -250,6 +251,7 @@ let movies = [
 ]
 //Watched Movies
 let tv = [
+    {"name":"American Vandal", "total_seasons":"2", "in_progress":"", "unwatched":""},
     {"name":"Archer", "total_seasons":"10", "in_progress":"8", "unwatched":[9, 10]},
     {"name":"Arrested Development", "total_seasons":"3", "in_progress":"", "unwatched":""},
     {"name":"Big Brother", "total_seasons":"21", "in_progress":"", "unwatched":[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 21]},
@@ -261,6 +263,7 @@ let tv = [
     {"name":"Community", "total_seasons":"6", "in_progress":"", "unwatched":[6]},
     {"name":"Cobra Kai", "total_seasons":"2", "in_progress":"", "unwatched":[2]},
     {"name":"Dark", "total_seasons":"2", "in_progress":"", "unwatched":""},
+    {"name":"Derry Girls", "total_seasons":"1", "in_progress":"", "unwatched":""},
     {"name":"Freaks and Geeks", "total_seasons":"1", "in_progress":"", "unwatched":""},
     {"name":"Glee", "total_seasons":"6", "in_progress":"", "unwatched":[6]},
     {"name":"Gravity Falls", "total_seasons":"2", "in_progress":"", "unwatched":""},
