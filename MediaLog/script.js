@@ -263,7 +263,7 @@ let tv = [
     {"name":"Community", "total_seasons":"6", "in_progress":"", "unwatched":[6]},
     {"name":"Cobra Kai", "total_seasons":"2", "in_progress":"", "unwatched":[2]},
     {"name":"Dark", "total_seasons":"2", "in_progress":"", "unwatched":""},
-    {"name":"Derry Girls", "total_seasons":"1", "in_progress":"", "unwatched":""},
+    {"name":"Derry Girls", "total_seasons":"2", "in_progress":"", "unwatched":""},
     {"name":"Fleabag", "total_seasons":"2", "in_progress":"", "unwatched":""},
     {"name":"Freaks and Geeks", "total_seasons":"1", "in_progress":"", "unwatched":""},
     {"name":"Glee", "total_seasons":"6", "in_progress":"", "unwatched":[6]},
