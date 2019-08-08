@@ -288,7 +288,8 @@ let tv = [
     {"name":"Steins;Gate 0", "total_seasons":"1", "in_progress":"", "unwatched":""},
     {"name":"That Time I Got Reincarnated as a Slime", "total_seasons":"1", "in_progress":"", "unwatched":""},
     {"name":"The Good Place", "total_seasons":"3", "in_progress":"", "unwatched":""},
-    {"name":"Unbreakable Kimmy Schmidt", "total_seasons":"5", "in_progress":"1", "unwatched":[2, 3, 4, 5]}
+    {"name":"Unbreakable Kimmy Schmidt", "total_seasons":"5", "in_progress":"1", "unwatched":[2, 3, 4, 5]},
+    {"name":"Video Game High School", "total_seasons":"3", "in_progress":"", "unwatched":""}
 ]
 //Watched TV Shows
 
