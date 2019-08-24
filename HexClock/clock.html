@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    <div class="content">
+        <h1 id="time"></h1>
+    </div>
+    <script>
+        var timeString = document.getElementById("time")
+        timeString.style.fontSize = "500%";
+        var interval = setInterval(function() {
+            t = new Date();
+            
+            hours = (t.getHours() < 10) ? ("0" + t.getHours()) : (t.getHours());
+            minutes = (t.getMinutes() < 10) ? ("0" + t.getMinutes()) : (t.getMinutes());
+            seconds = (t.getSeconds() < 10) ? ("0" + t.getSeconds()) : (t.getSeconds());
+
+            hexString = ((9 < hours && hours < 16) ? "0" : "")+hours.toString(16) + ((9 < minutes && minutes < 16) ? "0" : "")+minutes.toString(16) + ((9 < seconds && seconds < 16) ? "0" : "")+seconds.toString(16)
+            complement = ('000000' + (('0xffffff' ^ '0x'+hexString).toString(16))).slice(-6); //https://stackoverflow.com/questions/1664140/js-function-to-calculate-complementary-colour
+
+            
+            timeString.textContent = hours + ":" + minutes +":"+seconds;
+            document.querySelector("body").style.backgroundColor ="#"+hexString
+            timeString.style.color = "#" + complement    
+            console.log(complement, hexString)        
+        }, 1000)
+    </script>
+</body>
+</html>
