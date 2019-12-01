@@ -68,6 +68,10 @@ function setupScoresheet() {
         finalRow.appendChild(finalCellScore)
     }
 
+    let ruleCell = document.createElement("td")
+    ruleCell.innerHTML = "<button id='rules'>Rules</button>" 
+    finalRow.appendChild(ruleCell)
+
     scoresheet.append(finalRow)
 
     scoresheet.style.width = "100%";
@@ -112,5 +116,12 @@ function setupListeners() {
     for(let i = 0; i < document.getElementsByClassName("player_name").length; i++) {
         document.getElementsByClassName("player_name")[i].addEventListener('change', updatePlayerNames)  
     }
+    document.getElementById('rules').addEventListener('click', function() {
+        if(document.getElementById('rules_text').style.display == 'none') {
+            document.getElementById('rules_text').style.display = 'inline';
+        } else {
+            document.getElementById('rules_text').style.display = 'none'; 
+        }
+    })
 }
 
