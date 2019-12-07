@@ -10,14 +10,16 @@ function stringToLowerList(s) {
     return s.toLowerCase().split("")
 }
 
-function intersection(a, b) {
-    if(typeof a === 'string') a = stringToLowerList(a)
-    if(typeof b === 'string') b = stringToLowerList(b)
-    return b.filter(x => a.includes(x)); //b intersect a rather than a intersect b, this checks school against name rather than vice versa
+function intersectionCount(a, b) {
+    b_lower = b.toLowerCase()
+    for(l of a.toLowerCase()) {
+        b_lower = b_lower.replace(l, "")
+    }
+    return b.length - b_lower.length
 }
 
 function calculateOdds(name, school) {
-    return intersection(name, school).length / school.length
+    return intersectionCount(name, school) / school.length
 }
 
 function decimalToPercent(dec, places, appendSign) {
