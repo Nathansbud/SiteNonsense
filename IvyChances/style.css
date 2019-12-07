@@ -1,0 +1,17 @@
+body {
+    background: lightyellow;
+    text-align: center;
+}
+
+*:not(text) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#odds_text {
+    display: none;
+}
+
+h1, h2 {
+    text-align: center;
+}

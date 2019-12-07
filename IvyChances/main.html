@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <h1>Ivy-Adjacent Odds Calculator</h1>
+        <span>Input Your First Name:</span><br>
+        <input type="text" id="name"></input><br>
+        <span>Select Your Ivy-Adjaent School:</span><br>
+        <select id="schools">
+            <option name="brown">Brown</option>
+            <option name="cornell">Cornell</option>
+            <option name="columbia">Columbia</option>
+            <option name="harvard">Harvard</option>
+            <option name="dartmouth">Dartmouth</option>
+            <option name="mit">MIT</option>
+            <option name="princeton">Princeton</option>
+            <option name="mit">UCB</option>
+            <option name="upenn">UPenn</option>
+            <option name="stanford">Stanford</option>
+            <option name="yale">Yale</option>
+        </select><br>
+        <button id="calculate_button">Calculate Odds</button>
+        <h2 id="odds_text">
+            <span id="name_replace"></span> odds of acceptance to <span id="school_replace"></span> are...<span id="odds_replace"></span>!
+        </h2>
+        <script src="odds.js"></script>
+    </body>
+</html>
