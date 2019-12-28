@@ -40,7 +40,7 @@ function setupScoresheet() {
             }
         }
 
-        roundCell.innerHTML = rounds[i] + " (" + cardCount + " Cards)"
+        roundCell.innerHTML = rounds[i] + " (" + ((cardCount < 10) ? (10) : cardCount) + " Cards)"
         newRound.appendChild(roundCell)
         
         let playerCells = []
@@ -98,6 +98,7 @@ function changePlayers(count) {
 }
 
 function setupListeners() {
+    document.getElementById('rules_text').style.display = 'none';
     for(let i = 0; i < rounds.length; i++) {
         for(let j = 0; j < playerCount; j++) {
             document.getElementById("p"+(j+1)+"_r"+(i+1)+"_score").addEventListener("change", function() {
@@ -117,7 +118,7 @@ function setupListeners() {
         document.getElementsByClassName("player_name")[i].addEventListener('change', updatePlayerNames)  
     }
     document.getElementById('rules').addEventListener('click', function() {
-        if(document.getElementById('rules_text').style.display == 'none') {
+       if(document.getElementById('rules_text').style.display == 'none') {
             document.getElementById('rules_text').style.display = 'inline';
         } else {
             document.getElementById('rules_text').style.display = 'none'; 

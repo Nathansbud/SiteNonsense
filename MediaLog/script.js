@@ -491,6 +491,9 @@ let books = [
 
     {"name":"What If?", "author":"Randall Munroe"},
     {"name":"Fablehaven", "author":"Brandon Mull", "series":"Fablehaven"},
+    {"name":"Born a Crime", "author":"Trevor Noah"}, 
+    {"name":"Because Internet", "author":"Gretchen McCulloch"},
+    {"name":"Persepolis", "author":"Marjane Satrapi"},
     {"name":"Fablehaven: Rise of the Evening Star", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Grip of the Shadow Plague", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Secrets of the Dragon Sanctuary", "author":"Brandon Mull", "series":"Fablehaven"},
