@@ -458,10 +458,8 @@ let books = [
     {"name":"Tall Tales", "author":"Jeff Smith", "series":"Bone"},
     {"name":"Bone: Stupid Stupid Rat-Tails", "author":"Jeff Smith", "series":"Bone"},
 
-
     {"name":"Bone: Quest for the Spark, Vol. 1", "author":"Tom Sniegoski", "series":"Bone: Quest for the Spark"},
     {"name":"Bone: Quest for the Spark, Vol. 2", "author":"Tom Sniegoski", "series":"Bone: Quest for the Spark"},
-
 
     {"name":"Magyk", "author":"Angie Sage", "series":"Septimus Heap"},
     {"name":"The Darke Toad", "author":"Angie Sage", "series":"Septimus Heap"},
@@ -489,15 +487,17 @@ let books = [
     {"name":"The Way of Kings", "author":"Brandon Sanderson", "series":"The Stormlight Archive"},
     {"name":"Words of Radiance", "author":"Brandon Sanderson", "series":"The Stormlight Archive"},
 
-    {"name":"What If?", "author":"Randall Munroe"},
     {"name":"Fablehaven", "author":"Brandon Mull", "series":"Fablehaven"},
-    {"name":"Born a Crime", "author":"Trevor Noah"}, 
-    {"name":"Because Internet", "author":"Gretchen McCulloch"},
-    {"name":"Persepolis", "author":"Marjane Satrapi"},
     {"name":"Fablehaven: Rise of the Evening Star", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Grip of the Shadow Plague", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Secrets of the Dragon Sanctuary", "author":"Brandon Mull", "series":"Fablehaven"},
-    {"name":"Fablehaven: Keys to the Demon Prison", "author":"Brandon Mull", "series":"Fablehaven"}
+    {"name":"Fablehaven: Keys to the Demon Prison", "author":"Brandon Mull", "series":"Fablehaven"},
+
+    {"name":"Born a Crime", "author":"Trevor Noah"}, 
+    {"name":"Because Internet", "author":"Gretchen McCulloch", "date":"2019/12/27"},
+    {"name":"Persepolis", "author":"Marjane Satrapi", "date":"2019/12/27"},
+    {"name":"What If?", "author":"Randall Munroe", "date":"2019/12/30"},
+    {"name":"Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made", "author":"Jason Schreier", "date":"2019/12/31"},
 ]
 
 movie_list = document.getElementById("movie_list");
