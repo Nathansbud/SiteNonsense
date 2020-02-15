@@ -1,4 +1,3 @@
-
 poems = [`Have you ever loved a rose,
 and watched her slowly bloom;
 and as her petals would unfold,
