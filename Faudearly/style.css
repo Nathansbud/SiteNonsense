@@ -1,0 +1,14 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 20px;
+    background: #faebcf;
+    
+    line-height: 1.4
+}
+
+div {
+    text-align: center;
+}
