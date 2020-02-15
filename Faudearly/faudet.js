@@ -1,3 +1,36 @@
+poem_body = document.getElementById("poem_body")
+generate_button = document.getElementById("generate")
+num_poems = document.getElementById("num_poems")
+poem_lines = document.getElementById("poem_lines")
+function generate_faudet(num, n_per) {
+    build_poem = ""
+    selected = _.sample(poems, num) 
+    c = 0
+    for(poem of selected) {
+        poem = poem.split("\n")
+        if(c == 0) {
+            build_poem += poem[0]+"\n"
+            poem = poem.slice(1)
+        }
+        poem = _.shuffle(poem)
+        if(n_per > poem.length) {
+            build_poem += poem.join("\n")
+        } else {
+            build_poem += _.sample(poem, n_per).join("\n")
+        }
+        build_poem += "\n"
+    }
+    lines = build_poem.split("\n")
+    poem_body.innerHTML = ""
+    for(line of lines) {
+        poem_body.innerHTML += line + "<br>"   
+    }
+}
+
+generate_button.addEventListener("click", function() {
+    generate_faudet(num_poems.value, poem_lines.value)
+})
+
 poems = [`Have you ever loved a rose,
 and watched her slowly bloom;
 and as her petals would unfold,
@@ -994,37 +1027,1113 @@ a final kiss,
 before we said
 our last good-bye,
 without a word
-being said.`]
+being said.`,
 
-poem_body = document.getElementById("poem_body")
-generate_button = document.getElementById("generate")
-num_poems = document.getElementById("num_poems")
-poem_lines = document.getElementById("poem_lines")
-function generate_faudet(num, n_per) {
-    build_poem = ""
-    selected = _.sample(poems, num) 
-    c = 0
-    for(poem of selected) {
-        poem = poem.split("\n")
-        if(c == 0) {
-            build_poem += poem[0]+"\n"
-            poem = poem.slice(1)
-        }
-        poem = _.shuffle(poem)
-        if(n_per > poem.length) {
-            build_poem += poem.join("\n")
-        } else {
-            build_poem += _.sample(poem, n_per).join("\n")
-        }
-        build_poem += "\n"
-    }
-    lines = build_poem.split("\n")
-    poem_body.innerHTML = ""
-    for(line of lines) {
-        poem_body.innerHTML += line + "<br>"   
-    }
-}
+`I think you loved me,
+the night we drank
+Turkish coffees,
+our fingers woven
+tighter than two
+hands held,
+by lovers dangling
+on a precipice
+of a cliff.
+Can you remember
+the moment
+our fingers let go?
+The stars rushing
+backward,
+no hope left
+below.`,
 
-generate_button.addEventListener("click", function() {
-    generate_faudet(num_poems.value, poem_lines.value)
-})
+`When chasing love
+at any cost-
+The pathways meet
+but seldom cross.
+I dream of dreams-
+Once dreamt,
+now lost.
+How sunshine steals
+from autumn frost.`,
+
+`I certainly know right from wrong, she said, 
+but the trouble is, whenever I feel your hands unclipping my bra-
+wrong suddenly feels wonderfully right.`,
+
+`Your words stirred something deep inside me, like a vodka martini sipped with thirsty lips-
+my body intoxicated by the very suggestion of you.
+I read the letter again.
+My hand between willing legs, writing a reply in cursive circles.
+Upon pretty pink paper unfolded.`,
+
+`We joined the dots
+from A to B,
+the line we drew
+from you to me,
+traced empty shores
+across the sea,
+over mountain top,
+past forest tree,
+along the roads
+and walking tracks,
+all bridges burned,
+no looking back,
+for the love
+we have,
+no gate can stop,
+no barking dog
+or bolted lock,
+for what is real
+is meant to be,
+when two hearts
+beat-
+in proximity.`,
+
+`A memory picked
+from a flower wilted,
+its petals faded
+all color crushed.
+How can I forget
+such fragrant perfume?
+The lingering regret
+of a love long lost.`,
+
+`She stole my words
+I wrote with lips,
+a broken heart
+is seldom missed,
+by those who write
+another's name,
+upon the lips
+I loved-
+in vain.`,
+
+`Picking up the pieces of a broken relationship is like gathering up shards of glass with bare hands and eyes closed.`,
+
+`A willow weeps
+its tears run green,
+upon pages turned
+by rippling lake
+and drowning weeds.
+A hooting owl
+in waving trees,
+a crying moon
+brought to
+its knees.
+In falling leaves,
+an autumn spent,
+the love we found
+it came
+and went.
+All parting words
+in darkness
+said,
+no rising sun
+can write anew-
+For what is lost,
+a willow weeps.`,
+
+`Our autumn came
+in coffee cups,
+from clouds of white
+to swirling brown,
+all wrinkly leaf,
+on muddy ground,
+the sugary sweet,
+sipped and stirred,
+with silver spoon
+and parting words,
+a butter knife
+on buttered toast,
+a morning mourned
+with marmalade.
+No fond farewell
+in silence made,
+just falling tears
+in fallen rain,
+all sunshine gone
+no warmth remains,
+in empty cups,
+our autumn came.`,
+
+`Her kisses were the wings of butterflies, beating softly upon lips of crushed petals-the perfume of love.`,
+
+`A snowflake falls,
+a story told,
+its melting words
+were mine to hold,
+I thought of you,
+when hands
+were held,
+two lovers lost
+to time
+it tells.`,
+
+`Her eyes burn bright,
+all half moon glow,
+my shining stars
+in darkness lit,
+a welcomed light
+in stormy sea,
+when torrid waves
+crash over me.
+No dancing fireflies
+can compete,
+all beauty found
+in eyes that meet,
+each curling lash
+unfurled, complete-
+her eyes in mine
+the love
+we speak.`,
+
+`The universe
+its mystery held,
+by winking stars
+and magic spells,
+a milky way
+of frothy milk,
+all spinning spun
+its secrets spilt,
+by laughing moon
+and smiling sun,
+a hologram
+since time begun.
+Where Alice lives
+in Wonderland,
+and rainbows made
+by sleight of hand,
+the open door
+we enter through,
+with golden key
+is 42,
+for what is real
+is real,
+is not,
+a riddle lost
+to a truth-
+forgot.`,
+
+`My heart has become a broken compass. Every time I try to leave you, I always find myself running back into your arms.`,
+
+`The Bed We Made
+A bed we made
+of thorny sheets,
+of jagged rocks,
+a chasm deep,
+cruel words once said
+a mountain steep,
+cannot be climbed
+in restless sleep,
+a nightmare shared,
+now ours
+to keep,
+for what is lost-
+tired eyes
+will weep.`,
+
+`We spoke of love
+and cities found,
+of buried gold
+deep underground,
+how rivers sigh
+when lost to sea,
+of whiskey poured
+in cups of tea.
+We spoke of art
+in golden frames,
+of memories lost,
+forgotten names,
+how shooting stars
+write wishes bright,
+and shadows fade
+into the night.
+We spoke of wolves
+and many things,
+of ticking clocks
+and circus swings,
+how crying doves
+fly up above,
+but most of all
+we spoke of love.`,
+
+`Falling so madly in love with you is a tragedy. Nothing in my world will ever seem so beautiful again.`,
+
+`There was no fanfare or fireworks show. 
+Just a quiet knowing somewhere deep within my heart. 
+It was love and she completed me.`,
+
+`Another year,
+a new beginning,
+a resolution made-
+to fall again
+in love
+with you-
+forever
+on this day.`,
+
+`In twilight skies
+we walk alone,
+to the dulcet beats
+of death's metronome,
+a passing cloud
+beneath our feet,
+all starry-eyed
+our world complete.
+No falling tears
+from smiling eyes,
+no rainy days
+the puddles dry,
+this heaven found
+with life's release,
+in happiness
+we dance
+in peace.
+In twilight skies
+we walk alone,
+to the dulcet beats
+of death's metronome,
+a passing cloud
+beneath our feet,
+all starry-eyed
+our world repeats.`,
+
+`You were my beautiful mistake and I don't regret anything. I would do it all again in a heartbeat.`,
+
+`It was once our spring
+when lovers met,
+and flowers grew
+without regret.
+The summer passed
+as summers do,
+a setting sun
+my love for you.
+Each falling leaf
+a fallen tear,
+the autumn came
+with winter near.
+Now all that's left
+of love is death,
+a story told
+with frozen breath.`,
+
+`When our eyes met, all time ceased to exist. The dying seconds frozen like the petals of red roses kissed by autumn frost.`,
+
+`You are forever
+my secret rainbow-
+Beautifully written
+upon a rainy,
+gray page.
+Where hope,
+like love,
+can be found again-
+This gold
+we share,
+is ours.`,
+
+
+`I am somewhere,
+strangely nowhere.
+A lone comma,
+placed midsentence.
+The worn needle stuck
+in a dusty groove
+of black vinyl,
+between the chaos
+and momentary calm
+of a Ramones track.
+Standing still.
+Where sea embraces shore
+and sinking sand rises
+to the farewell kiss
+of a crashing wave spent.
+Always waiting,
+the seconds passing.
+The anticipation of something,
+anything,
+forever calling.
+Like the promise
+of a late-night
+Coney Island hot dog.
+Dreaming of the moment
+when everything comes together,
+like melted butter
+and onions sizzling.
+When mustard
+meets
+ketchup
+meets
+chin.
+Lost is a lovely place
+to find yourself.`,
+
+`May angels sing
+a song,
+my love-
+a lullaby to sleep.
+The life you lived
+lives on,
+my love-
+this heart is yours
+to keep.
+A solace found
+in dying stars,
+shine on
+my love-
+shine bright.`,
+
+`Always fight for love-walk barefoot across the jagged shards of a broken heart but never become its victim.`,
+
+`I wrote you a love letter to explain how I felt about us-folded it neatly into a paper plane and threw it off a cliff.`,
+
+`To feel your hands
+upon my skin,
+a lover's touch
+from deep within,
+from gentle moans
+to piercing scream,
+a pleasure felt
+from here between-
+my legs adrift
+in joyful dream.`,
+
+`A trickle of silvery moonlight ran down her cheek. 
+"We all drown a little," she whispered. "That's how we learn to swim."`,
+
+`Falling in love is not rational. It's madness. A beautiful, wonderful moment of magnificent insanity.`,
+
+`I traced a raindrop with my finger as it slid down the windowpane, thinking of you and our final good-bye.`,
+
+`Pink cherry blossom falling,
+I often wonder why,
+a beauty slowly taken
+like branches now forsaken-
+I am the tree
+that learned to cry.
+Farewell my love,
+to fallen love,
+the wind became
+your words,
+the emptiness
+between us,
+the silent petals
+upon the earth.`,
+
+`I could speak of many things.
+How she lights up a room whenever she enters.
+The brilliance of her smile when flashed in my direction.
+The warm glow of her body lying next to mine on stormy nights.
+The radiance of her presence when the darkness descends and all hope seems lost.
+I call her my little lighthouse.`,
+
+`A bell that tolls
+with singing chimes,
+confetti rain
+from brilliant skies,
+your hand in mine
+is ours to keep,
+the vows we said
+I do, begin-
+the love we grow,
+from deep within,
+on finger placed
+a golden ring,
+no rising sun
+shall set again,
+for joyous day,
+a bell does sing.`,
+
+`I have always found beauty in the crooked and flawed.
+A lone dark cloud dancing on a stage of brilliant blue.
+The honesty of a song sung slightly out of tune.
+A pretty pink scar, its story told in a sentence written on a milky white thigh.
+I think that's why I love you and all your little eccentricities.
+The exquisite poetry of imperfection.
+Beautifully broken.
+And wonderfully damaged.`,
+
+`I can remember a time when time itself seemed endless.
+The second hand of a clock ticking in slow motion, the hour hand barely moving at all.
+A dull, rhythmic monotony, filling an empty void of nothingness.
+My life before you.
+Now time has turned from a trickle to a raging river.
+Bursting its banks with every beat of your heart.
+Our love swept along by the rushing cold water.
+Each passing day passing-
+Into the past.`,
+
+`It was the day
+my world turned to dust.
+The empty vase
+where violets grew,
+the unanswered text,
+a crumpled note
+cast to the floor-
+forgotten.
+A saucer of milk
+left untouched,
+the familiar meow
+of a cat silenced,
+by a final click
+of a door closed-
+forever.
+It was the day
+I held you for the very last time-
+like a desperate moon clings
+to a morning star.`,
+
+`Love is the real currency-the true wealth we all possess. Spend it wisely.`,
+
+`Whenever I'm with you,
+the clocks stop ticking,
+death is forgotten
+and spilt milk-
+stays spilt.`,
+
+`To speak of unconditional love is like building a palace on quicksand.`,
+
+`You stole my life
+and possessed me,
+a body held hostage,
+unbuttoned
+and bound.
+My beautiful surrender
+a ransom paid-
+With ruthless kisses
+upon trembling lips
+which utter
+not a sound.`,
+
+
+`We walked most mornings,
+a trail of bread crumbs
+in our wake,
+ducks diving in the pond,
+pigeons pecking
+on empty pathways,
+beneath a rainbow sky.
+Sparkles of watery sunlight
+clinging to your hair,
+a head turned-
+your smile
+reaching out
+and touching mine.
+Raindrops dripping
+from dying leaves,
+in the little park
+of make-believe,
+our secrets kept
+by bonsai trees.`,
+
+`She was wild, unpredictable, beautiful, and dangerous. 
+Impossible to resist. 
+A summer storm in a bikini.`,
+
+`Persian fairy floss
+pulled apart
+by sticky fingers.
+Your laptop open,
+pupils dilated,
+a Hentai clip
+playing on a pillow,
+my hand
+between your legs.
+A soft moan
+quietly spoken,
+from lips
+that swallow,
+the last piece
+of sugary sex.`,
+
+`"I believe in you." Words that water flowers.`,
+`Anticipation
+is the breath we take,
+a silent pause
+with lips awake,
+a lingering kiss
+two lovers make,
+to be with you
+I cannot wait,
+each passing day
+I contemplate-
+Anticipation
+is the breath we take.`,
+
+`It is in the quietest of moments,
+the silent pause found
+in twilight hue,
+when the sun
+slips behind the horizon,
+lost to a single
+purple pen stroke-
+I find myself
+thinking of you.
+How your eyes
+reflect the moon
+in mine,
+reminding me
+of a love
+greater than
+the universe-
+our destiny written
+in the stars.`,
+`Nobody knows your heart better than you. Trust your instincts. Never let anyone cast a shadow over your sunshine.`,
+`You can't remove my scars or rewrite the past that haunts me. Just hold me tight and tell me everything's going to be okay.`,
+`You held my heart in hands cupped-
+a chalice emptied
+by love's betrayal,
+treachery concealed
+within a kiss,
+the poison sipped
+by innocent lips.`,
+`You were the sea
+that swept me away,
+only to leave
+me adrift-
+far from the shore,
+my legs
+growing tired,
+of the lies
+that you said,
+out of my depth-
+in deep water
+I tread.`,
+`I wish I could apologize for falling in love with you but I can't. It would be like asking me to be sorry for breathing.`,
+`It was a love that transcended even the most vibrant of colors, beautiful in its simplicity-written in black and white upon two beating hearts for all the world to read.`,
+`It was the end
+of the beginning,
+beneath tangled sheets
+and sighing breath,
+sex blushing pink
+between your legs,
+open to the possibility
+of more to come,
+fingernails writing
+unfinished lines
+down my back,
+the scratches raw
+and incomplete,
+a river still running
+whispering my name,
+desire growing
+again and again-
+and again.`,
+`Love is a little like religion. You need to have faith before miracles can happen.`,
+`She wore the perfume
+of pages turned,
+the scent of old books
+upon delicate fingers,
+a hint of sunshine
+captured within curls
+of windswept hair.
+A morning made
+with poetry
+and swirling milk,
+in coffee sipped
+while Paris wakes,
+the words she read
+in dawn's pale light-
+how butter melts
+on warm croissants.`,
+`She was a muse
+cursed with melancholia,
+her tears the ink
+on my typewriter ribbon.`,
+		
+`So magnificent
+this mask I wear,
+my smile drawn
+with a broken
+yellow crayon,
+the loneliness
+concealed,
+in a garden
+of plastic flowers-
+my life revealed.`,
+`We drank martinis
+with cigarettes lit,
+the hedonist dream
+in limousines driven,
+the love we took
+no quarter given,
+our empty eyes-
+behind sunglasses
+hidden.`,
+`You were impossible to resist. I was like a bee seduced by a flower on a glorious spring day.`,
+`There were days when it seemed like I was trapped in an endless game of hide-and-seek with myself.`,
+`You wanted all of me but I had nothing more to give.`,
+`Pretty wrists
+tied and tethered,
+a blindfold worn-
+black stockings
+and leather,
+pink stripper heels
+bound together,
+the freedom
+she feels,
+unchained
+forever.`,
+`When you walked out of my life, it was like the sun had completely vanished from the sky. I now know why clouds cry.`,
+`All it took was one kiss.
+The tide running backward away from the beach.
+Our love-
+An unstoppable force building on the horizon.
+Two hearts stranded on the shore.
+Waiting for the tsunami to hit.`,
+`We always lived for tomorrow. Never for today. Now all that's left of our love is an unfinished yesterday.`,
+`A secret shared
+by quivering lips,
+the words escape
+in shades of blue,
+no eyes can hide
+in downward glance-
+a passing cloud
+across the sun.
+
+A glass of red
+remains untouched,
+a quiet sigh
+is barely heard,
+the whisper
+of a summer breeze-
+lost within a chorus
+of singing cicadas.
+
+When left unsaid
+so much is said,
+your silence-
+I understood.`,
+`Do we not enter this world a little broken? 
+Damaged goods with awkward smiles. 
+Searching for the glue we call love.`,
+`It was your careless words,
+laced with malice
+that drew blood
+upon wrists-
+that longed
+only to be kissed.`,
+`How I loved those summer evenings counting the stars 
+while you read Norwegian Wood aloud to me
+the sentences punctuated with warm kisses and sips of vodka.`,
+`She ran,
+a trail of stardust in her wake,
+past a rising moon
+and fallen sun,
+across a sky
+of billowing black,
+running forward
+but returning back,
+to the place
+where dreams began,
+on pillows pink-
+the velvet crushed,
+an opium pipe
+in fingers held,
+two lovers kiss
+with smoky lips,
+a trace of lemon
+and honey spilt,
+her sleepy eyes
+a patchwork quilt,
+all magic sewn
+with golden needle,
+upon an arm
+with purple thread,
+a pencil writes
+another sentence,
+a circle drawn
+where it began,
+another dream,
+a new beginning,
+across a sea
+of poppies red-
+she runs.`,
+`I love how your hips rise, 
+reaching the point of no return, 
+fingers gripping the sheets-my hand between your legs.`,
+`Billowing clouds painted lilac,
+splashes of pale pink
+across a dawning sky,
+your smile illuminated
+by glowing shafts
+of morning sunlight,
+the sound of crashing waves
+on a beach below,
+another day
+in your arms-
+begun.`,
+				
+`The love we share
+with open hearts,
+overflowing-
+like a river
+bursting its banks.
+And when we fuck
+how beautiful
+the night-
+a firework show
+on the 4th of July.`,
+`Lust is a dangerous sea-
+the rocks concealed,
+a lighthouse dark,
+our hearts shipwrecked-
+by a crashing wave
+of complicity.`,
+`Whenever you spoke, your voice was like music. 
+A symphony composed by the very lips I longed to kiss.`,
+
+`A single raindrop
+clinging to a withered leaf,
+the last sip of vodka
+slowly slipping down
+a tilted glass,
+a cigarette dying
+by a riverbank,
+the last strand
+of winter hair
+turning gray,
+ink drying
+on a page,
+all memory
+of you,
+quietly fading
+away.`,
+
+`You opened my heart
+while I lay sleeping,
+fingers turning
+a broken lock,
+the combination
+I was keeping,
+you remembered
+while I forgot.
+
+A second chance
+another meeting,
+a chasm breached
+with spoken words,
+forgiveness found
+not mine for keeping,
+in waking dream
+all hope is lost.`,
+
+`How can I move on?
+When every single muscle
+inside this broken body
+refuses to wake,
+paralyzed by grief
+and desperation.
+
+My trembling hands
+unable to grasp,
+the fragile pieces
+of love's jigsaw puzzle,
+scattered by a wind
+which changed
+without warning,
+a new direction
+decided by you,
+on a careless whim
+with no explanation.
+Here, take my heart
+with hammer held,
+and finish the job
+your words so
+poorly started,
+leave me empty
+no trace of dust,
+erase all memory
+and delete the past,
+squeeze the last
+drop from my
+crying eyes,
+for until you do
+how can I move on?`,
+`You became invisible,
+a ghost haunting
+the ruins of a heart
+left broken,
+where love
+once burned,
+so quickly taken,
+like a bucket
+of water
+thrown on a fire,
+all trace
+of warmth-
+forsaken.`,
+`It was her eyes
+that sang the songs-
+with a voice
+that reminded me
+of rainy nights
+and opium.
+
+Like a runaway kite
+lost to the wind,
+summer storms
+and circus swings.
+And when she sings-
+a spell is cast,
+her rose petal lips
+breaking hearts.`,
+`Twenty candles
+burning bright.
+A love composed
+its rhythm kept-
+by beating heart
+and bass guitar.
+A violet held
+in summer's hand.
+My birthday wish,
+your happiness.`,
+`The further we run away from our heart, the quicker we lose sight of who we really are.`,
+`I woke up,
+not with the gentle
+stirring of sheets
+against my skin,
+or your alarm-
+Amy Winehouse
+singing "Rehab"
+on an iPhone,
+but to an empty space-
+the one you
+left behind.`,
+`It is your heart that beats within my body. 
+The love you give-the blood that runs through my veins.`,
+`You have gone,
+somewhere far away
+beyond the reach
+of these hands,
+wishing for yours-
+the touch of skin
+against skin
+in a warm shower,
+a memory reset
+by the cycle
+of a smiling sun
+and crying moon,
+my lips quietly
+counting down
+the days,
+until your eyes
+hold mine again,
+and our love
+is the only thing
+we can see.`,
+`All that we seek
+only confusion found,
+in vodka shots
+and empty pill bottles,
+writing love letters
+never sent,
+riding roller coasters
+on rusty rails-
+our lives spent,
+living the lie
+but holding
+onto the dream,
+the sweet scent
+of youth
+corrupted-
+by the reality
+of tomorrow.`,
+`In the dying darkness-
+before the dawn wakes
+from its slumber,
+and a tired moon
+falls gently
+back to sleep,
+before the first note
+by magpie sung,
+beneath the covers
+of a restless bed-
+the softest of moans
+breaking the silence,
+a sinking star
+in a sea of black,
+before a summer sun
+rises in the East,
+from open lips
+comes the scream
+of sweet release.`,
+`All I ever wanted, 
+the only wish I ever had, 
+was to run away with you 
+and never stop running.`,
+`The tragedy
+of the dispossessed,
+those lonely souls
+with love-
+obsessed,
+no tears
+can put a heart
+to rest,
+when chasing
+a dream-
+and settling
+for second best.`,
+`Just the very sound of your voice can bring me to my knees 
+and make me think of all the things I'd love to do but dare not say.`,
+`Dappled light
+plays hide-and-seek,
+with summer leaves
+of rustling green,
+the restless swans
+in rippling pond,
+your hand in mine
+where it belongs,
+a pale blue sky
+with red balloons,
+a coffee stirred
+with plastic spoon,
+a park-side view
+our kisses sent-
+from trembling lips
+and melting hearts,
+how lovers pass
+a perfect day.`,`You were a curse
+gift-wrapped in poetry,
+breaking hearts
+with broken verse.`,
+				
+`Of all the things
+you've said to me,
+sometimes rainbows
+other times storms,
+it's the red roses
+you plant inside my heart,
+that I remember,
+every time you say
+the words-
+I love you.`,`Never say never
+nor question whether,
+two distant hearts
+can stay together,
+for true love
+is a ship,
+that can sail
+in any weather.`,
+`When you hold me in your arms, there are times when I have to pinch myself. 
+Just to remind me I'm not dreaming.`,
+`It was your words
+I missed the most,
+softly spoken
+in winter gray,
+beautiful-
+spilling from lips
+like falling snow
+in late November,
+every conversation
+a poem written,
+melting my heart-
+so warm,
+so wonderful,
+so unforgettable-
+the words
+you spoke.`,
+`Cry for me,
+not when I'm dead,
+for that will be too late-
+cry for me now
+while I'm still here,
+to kiss your tears
+away.`,
+`You lived for books,
+lost within a dusty world
+of turned pages,
+each sentence read
+a breath drawn,
+every word-
+the blood
+rushing through
+your veins,
+how I wished
+I was a story,
+inside a book,
+held lovingly
+in your hands,
+never to be
+put down.`,
+`My words-
+poorly chosen,
+ill spoken,
+screamed
+into a fierce wind,
+a mistake
+blown back,
+misdirected,
+now directed-
+at a heart,
+I alone
+have broken.`,
+`Even the darkest of days will pass. A cloud cannot hide the sun forever.`,
+`On any other day
+I would go quietly
+into the mist,
+and be lost
+within the trees
+of forest green-
+to become invisible,
+unseen.
+
+How simple it would be
+to throw this love away,
+to never look back
+and just leave-
+on any other day.`,
+`When a relationship ends, no matter how painful, always remember it is not the end of love.`,
+`We wandered-
+across stony ground,
+the pebbles beneath
+our feet like cotton balls,
+the bitterly cold wind-
+a warm blanket
+wrapped around
+naked shoulders,
+the scratches
+from thorns,
+playful fingers
+tickling legs.
+
+For nothing
+can take away
+from love's
+gentle touch.`,
+`Romance seldom happens overnight. Sometimes we have to grow the roses before we can give them.`,
+`When you say goodbye, please whisper it. Better still, say nothing and just tiptoe quietly out of my life.`,
+
+`How wonderful-
+on a rainy afternoon,
+when the space
+between us closes,
+and I can feel
+your warm breath
+caress my neck,
+your legs wrapped
+around my waist,
+winter's song
+playing softly,
+while we fuck
+beneath the covers,
+in rhythm
+with the raindrops.`,
+`There were moments, fleeting shadows, when the sunlight caught her hair, like a '70s photograph taken with a Hasselblad camera.
+A cigarette lit and held by pretty red lips.
+A quiet alarm clock and a French bulldog barking.
+An untouched croissant sitting on a lilac plate by the side of the bed.
+A vase of yesterday's flowers slowly dying on the windowsill.
+Her bedroom, our secret darkroom.
+Where love slowly came to life in muted colors.`,
+`Love can often be like waiting for a train to arrive and then suddenly realizing you're standing on the wrong platform.`,
+`The years will pass,
+sometimes slowly
+other times
+in a blink of an eye,
+but please, my love,
+never fear
+their passing,
+for we will always
+have each other,
+and our love
+will never age.`]
