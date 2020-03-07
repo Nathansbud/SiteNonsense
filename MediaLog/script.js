@@ -12,37 +12,59 @@ searchbar = document.getElementById("searchbar");
 
 window.onload = function() {
     for(m of movies) {
-        let n = document.createElement("li");
-        n.setAttribute("class", "movie_item item");
-        n.setAttribute("data-name", m['name'].toLowerCase())
-        n.textContent = m['name'];
-        movie_list.appendChild(n);    
+        let elem = document.createElement("li");
+        elem.setAttribute("class", "movie_item item");
+        elem.setAttribute("data-name", m['name'].toLowerCase())
+        let tooltipDiv = document.createElement("div")
+        tooltipDiv.setAttribute("class", "tooltip")
+        let elemName = document.createElement("span")
+        elemName.textContent = m['name']
+        tooltipDiv.appendChild(elemName)
+        if('watches' in m) {
+            let tt = document.createElement("span")
+            tt.setAttribute("class", "tooltiptext")
+            tt.textContent = "Watches: " + m['watches']
+            tooltipDiv.appendChild(tt)
+        }
+        elem.appendChild(tooltipDiv)
+        movie_list.appendChild(elem);    
     }
 
     for(t of tv) {
-        let n = document.createElement("li")
-        n.setAttribute("class", "tv_item item")
-        n.setAttribute("data-name", (t.name).toLowerCase())
-        n.textContent = t.name + " - [";
-        console.log(t.total_seasons)
-        for(let i = 1; i < (parseInt(t.total_seasons)+1); i++) {
-            let sn = document.createElement("span");
-            if(t.unwatched.includes(i)) {
-                sn.setAttribute("class", "unwatched")
-            } else if(t.in_progress == i) {
-                sn.setAttribute("class", "in_progress")
-            } else {
+        let elem = document.createElement("li")
+        elem.setAttribute("class", "tv_item item")
+        elem.setAttribute("data-name", (t['name']).toLowerCase())
+        let elemDiv = document.createElement("div");
+        elemDiv.setAttribute("class", "season_div")
+        elemName = document.createElement("span")
+        elemName.textContent = t['name']
+        elemDiv.append(elemName)
+        elemDiv.appendChild(document.createTextNode(" ["))
+        for(let i = 1; i < t.seasons+1; i++) {
+            let tooltipDiv = document.createElement('div')
+            tooltipDiv.setAttribute("class", "tooltip")
+            let sn = document.createElement("span")
+            if(!("unwatched" in t) && !("unfinished" in t)) {
                 sn.setAttribute("class", "watched")
+            } else if("unwatched" in t && t["unwatched"].includes(i)) {
+                sn.setAttribute("class", "unwatched")
+            } else if("unfinished" in t && t["unfinished"] == i) {
+                sn.setAttribute("class", "unfinished")
+            } 
+            sn.textContent = i
+            tooltipDiv.appendChild(sn)
+            if(i != t.seasons) tooltipDiv.appendChild(document.createTextNode("-"))
+            if("watches" in t && i in t['watches']) {
+                let tt = document.createElement("span")
+                tt.setAttribute("class", "tooltiptext")
+                tt.textContent = "Watches: " + t['watches'][i]
+                tooltipDiv.appendChild(tt)
             }
-            sn.textContent = (i==t.total_seasons)?(i):(i+" ");
-            n.appendChild(sn)
-            if(i == t.total_seasons) {
-                tn = document.createTextNode("]")
-                n.appendChild(tn)
-            }
+            elemDiv.appendChild(tooltipDiv)
+            elem.appendChild(elemDiv)
         }
-
-        tv_list.appendChild(n);
+        elemDiv.appendChild(document.createTextNode("]"))
+        tv_list.appendChild(elem);
     }
 
     for(b of books) {
