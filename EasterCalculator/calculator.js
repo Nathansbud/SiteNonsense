@@ -1,6 +1,9 @@
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 var yearSelect = document.getElementById("dropdown")
 var dateText = document.getElementById('date')
+var fallsText = document.getElementById('falls')
+var notToday = document.getElementById("not-today")
+var today = document.getElementById("today")
 
 for(let i = 1900; i < 2100; i++) {
     let option = document.createElement("option")
@@ -29,10 +32,26 @@ function calculateEasterGregorian(year) {
 }
 
 function setDateText(value) {
+    notToday.style.display = "inline-block";
+    today.style.display = "none";
+
     dateText.textContent = value
+    
+    if(yearSelect.value < new Date().getFullYear()) fallsText.textContent = "fell"
+    else if(yearSelect.value > new Date().getFullYear()) fallsText.textContent = "falls"
+    else {
+        let now = new Date()
+        value = value + ", 2020"
+        if(Date.parse(value) - now >= 0) {
+            fallsText.textContent = "falls"
+        } else if(Date.parse(value) - now > -86400000) {
+            notToday.style.display = "none";
+            today.style.display = "inline-block";
+        } else {
+            fallsText.textContent = "fell"
+        }
+    }
 }
-
-
 
 yearSelect.addEventListener('change', function(event) {
     setDateText(calculateEasterGregorian(parseInt(yearSelect.options[yearSelect.selectedIndex].text)))
