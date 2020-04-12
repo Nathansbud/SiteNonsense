@@ -228,6 +228,7 @@ let movies = [
     {"name":"The Devil Wears Prada"},
     {"name":"The Edge of Seventeen"},
     {"name":"The Favourite"},
+    {"name":"The Gentleman"},
     {"name":"The Great Gatsby"},
     {"name":"The Hobbit: An Unexpected Journey"},
     {"name":"The Hobbit: The Desolation of Smaug"},
