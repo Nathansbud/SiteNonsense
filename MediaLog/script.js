@@ -10,7 +10,24 @@ book_div = document.getElementById("books");
 
 searchbar = document.getElementById("searchbar");
 
+String.prototype.removeStart = function (ss) {
+    return (this.startsWith(ss) ? this.substring(ss.length) : this)
+}
+
 window.onload = function() {
+    name_sort = function(a, b) {
+        aa = a['name'].toLowerCase().removeStart("the ")
+        ba = b['name'].toLowerCase().removeStart("the ")
+        
+        if(aa > ba) return 1
+        else if(aa < ba) return -1
+        else 0
+    }
+
+    movies.sort(name_sort)
+    tv.sort(name_sort)
+    books.sort(name_sort)
+
     for(m of movies) {
         let elem = document.createElement("li");
         elem.setAttribute("class", "movie_item item");
@@ -68,7 +85,6 @@ window.onload = function() {
     }
 
     for(b of books) {
-        console.log(b)
         let n = document.createElement("li")
         n.setAttribute("class", "book_item item")
         n.setAttribute("data-name", (b.name).toLowerCase())
