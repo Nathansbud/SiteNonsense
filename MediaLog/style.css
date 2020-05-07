@@ -33,7 +33,7 @@ ul.nav li a:hover {
     border: 2px solid grey;
 }
 
-.in_progress {
+.unfinished {
     color: purple;
 }
 
