@@ -10,7 +10,7 @@ let movies = [
     {"name":"Ace Ventura: Pet Detective"},
     {"name":"Aladdin"},
     {"name":"Alice in Wonderland (2010)"},
-    {"name", "Ali Wong: Baby Cobra"},
+    {"name":"Ali Wong: Baby Cobra"},
     {"name":"Almost Famous"},
     {"name":"Another Cinderella Story"},
     {"name":"Antz"},
