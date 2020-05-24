@@ -173,6 +173,7 @@ let movies = [
     {"name":"Mulan"},
     {"name":"My Big Fat Greek Wedding"},
     {"name":"Nanny McPhee"},
+    {"name":"Nate Bargatze: The Tennessee Kid"},
     {"name":"National Treasure"},
     {"name":"Night at the Museum"},
     {"name":"Night at the Museum 2"},
@@ -307,7 +308,7 @@ let tv = [
     {"name":"American Vandal", "seasons":2},
     {"name":"Awkward", "seasons":5, "unfinished":4, "unwatched":[5]},
     {"name":"Archer", "seasons":10, "unfinished":8, "unwatched":[9, 10]},
-    {"name":"Arrested Development", "seasons":3, "watches":{1:2, 2:2}},
+    {"name":"Arrested Development", "seasons":3, "watches":{1:2, 2:2, 3:2}},
     {"name":"Better Off Ted", "seasons":2},
     {"name":"Big Brother", "seasons":21, "unwatched":[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 21]},
     {"name":"Big Mouth", "seasons":3},
@@ -470,6 +471,19 @@ let books = [
     {"name":"Fear", "author":"Michael Grant", "series":"Gone"},
     {"name":"Light", "author":"Michael Grant", "series":"Gone"},  
 
+    {"name":"The Graveyard Book", "author":"Neil Gaiman"},
+    {"name":"American Gods", "author":"Neil Gaiman"},
+
+    {"name":"Diary of a Wimpy Kid", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Rodrick Rules", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Last Straw", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Dog Days", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Ugly Truth", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Cabin Fever", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Third Wheel", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Hard Luck", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Long Haul", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    
     {"name":"The Hero's Guide to Saving Your Kingdom", "author":"Christopher Healy", "series":"The League of Princes"},
     {"name":"The Hero's Guide to Storming the Castle", "author":"Christopher Healy", "series":"The League of Princes"},
     {"name":"The Hero's Guide to Being an Outlaw", "author":"Christopher Healy", "series":"The League of Princes"},
@@ -506,31 +520,53 @@ let books = [
     {"name":"Fyre", "author":"Angie Sage", "series":"Septimus Heap"},
 
 
-    {"name":"Peter and the Starcatchers", "author":"Dave Barry", "series":"Peter and the Starcatchers"},
-    {"name":"Peter and the Shadow Thieves", "author":"Dave Barry", "series":"Peter and the Starcatchers"},
-    {"name":"Peter and the Secret of Rundoon", "author":"Dave Barry", "series":"Peter and the Starcatchers"},
-    {"name":"Peter and the Sword of Mercy", "author":"Dave Barry", "series":"Peter and the Starcatchers"},
-    {"name":"The Bridge to Never Land", "author":"Dave Barry", "series":"Peter and the Starcatchers"},
+    {"name":"Peter and the Starcatchers", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":1}},
+    {"name":"Peter and the Shadow Thieves", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":2}},
+    {"name":"Peter and the Secret of Rundoon", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":3}},
+    {"name":"Peter and the Sword of Mercy", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":4}},
+    {"name":"The Bridge to Never Land", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":5}},
     {"name":"Watchmen", "author":"Alan Moore"},
 
-    {"name":"Legend", "author": "Marie Lu", "series":"Legend"},
-    {"name":"Prodigy", "author": "Marie Lu", "series":"Legend"},
-    {"name":"Champion", "author": "Marie Lu", "series":"Legend"},
+    {"name":"Legend", "author": "Marie Lu", "series":{"name":"Legend", "book":1}},
+    {"name":"Prodigy", "author": "Marie Lu", "series":{"name":"Legend", "book":2}},
+    {"name":"Champion", "author": "Marie Lu", "series":{"name":"Legend", "book":3}},
 
     {"name":"Ready Player One", "author":"Ernest Cline"},
 
     {"name":"The Way of Kings", "author":"Brandon Sanderson", "series":"The Stormlight Archive"},
     {"name":"Words of Radiance", "author":"Brandon Sanderson", "series":"The Stormlight Archive"},
 
+    {"name":"Candor", "author":"Pam Bachorz"},
+
+    {"name":"The Giver", "author":"Louis Lowry", "count":2},
+    {"name":"Gossamer", "author":"Louis Lowry"},
+
+    {"name":"1984", "author":"George Orwell"},
+    {"name":"Fahrenheit 451", "author":"Ray Bradbury"},
+    {"name":"One Flew Over the Cuckoo's Nest", "author":"Ken Kesey"},
+    {"name":"To Kill a Mockingbird", "author":"Harper Lee"},
+
+    {"name":"Ender's Game", "series":"Ender's Game", "author":"Orson Scott Card"},
+    {"name":"Speaker for the Dead", "series":"Ender's Game", "author":"Orson Scott Card"},
+
+    {"name":"City of Bones", "author":"Cassandra Clare", "series":"The Mortal Instruments"},
+    {"name":"City of Ashes", "author":"Cassandra Clare", "series":"The Mortal Instruments"},
+    {"name":"City of Glass", "author":"Cassandra Clare", "series":"The Mortal Instruments"},
+    {"name":"City of Fallen Angels", "author":"Cassandra Clare",  "series":"The Mortal Instruments"},
+    {"name":"City of Lost Souls", "author":"Cassandra Clare", "series":"The Mortal Instruments"},
+    {"name":"City of Heavenly Fire", "author":"Cassandra Clare", "series":"The Mortal Instruments"},
+
     {"name":"Fablehaven", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Rise of the Evening Star", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Grip of the Shadow Plague", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Secrets of the Dragon Sanctuary", "author":"Brandon Mull", "series":"Fablehaven"},
     {"name":"Fablehaven: Keys to the Demon Prison", "author":"Brandon Mull", "series":"Fablehaven"},
+    //this is vaguely chronological from this point on
     {"name":"I Am Not Okay With This", "author":"Charles Forsman"},
     {"name":"Born a Crime", "author":"Trevor Noah"}, 
     {"name":"Because Internet", "author":"Gretchen McCulloch"},
     {"name":"Persepolis", "author":"Marjane Satrapi", "count":2},
     {"name":"What If?", "author":"Randall Munroe", "count":3},
     {"name":"Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made", "author":"Jason Schreier"},
+    {"name":"Good Omens", "author":"Terry Pratchett and Neil Gaiman"}
 ]

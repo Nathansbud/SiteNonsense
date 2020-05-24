@@ -86,15 +86,21 @@ window.onload = function() {
 
     for(b of books) {
         let n = document.createElement("li")
-        n.setAttribute("class", "book_item item")
-        n.setAttribute("data-name", (b.name).toLowerCase())
+        
         n.textContent = b.name + " - [";
         let sn = document.createElement("span");
-        sn.textContent = b.author
-        if(b.series != undefined) sn.textContent += " | " + b.series
+        if(!('series' in b)) b['series'] = {'name':"", "book":""}
+        else if(typeof b['series'] == "string") b['series'] = {'name':b['series'], "book":""}
+
+        sn.textContent = [b['author'], b['series']['name'], b['series']['book']].filter(function(p) {
+            return p != null && p != ""
+        }).join(" | ")
+
         n.appendChild(sn)
         tn = document.createTextNode("]")
         n.appendChild(tn)
+        n.setAttribute("class", "book_item item")
+        n.setAttribute("data-name", (b.name).toLowerCase() + " " + b.series['name'].toLowerCase() + " " + b.author.toLowerCase())
         book_list.appendChild(n);
     }   
 
