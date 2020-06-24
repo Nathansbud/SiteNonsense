@@ -33,6 +33,7 @@ let movies = [
     {"name":"Bohemian Rhapsody"},
     {"name":"Bolt"},
     {"name":"Booksmart", "watches":3},
+    {"name":"Boyhood"},
     {"name":"Brave"},
     {"name":"Bratz"},
     {"name":"Bridge to Terabithia"},
@@ -59,6 +60,7 @@ let movies = [
     {"name":"Despicable Me 2"},
     {"name":"Divergent"},
     {"name":"Doctor Strange"},
+    {"name":"Drew Allen: This Is Why Your Girlfriend Dumped You."},
     {"name":"Dumb and Dumber"},
     {"name":"Dumbo"},
     {"name":"E.T."},
@@ -91,6 +93,7 @@ let movies = [
     {"name":"Guardians of the Galaxy"},
     {"name":"Hairspray"},
     {"name":"Hannah Gadsby: Nanette"},
+    {"name":"Hannah Gadsby: Douglas"},
     {"name":"Happy Feet"},
     {"name":"Happy Feet 2"},
     {"name":"Happy Gilmore"},
@@ -129,9 +132,9 @@ let movies = [
     {"name":"Inside Out"},
     {"name":"Instellar"},
     {"name":"Jaws"},
-    {"name":"John Mulaney: The Comeback Kid"},
-    {"name":"John Mulaney: Kid Gorgeous at Radio City"},
-    {"name":"John Mulaney: New in Town"},
+    {"name":"John Mulaney: The Comeback Kid", "watches":3},
+    {"name":"John Mulaney: Kid Gorgeous at Radio City", "watches":2},
+    {"name":"John Mulaney: New in Town", "watches":3},
     {"name":"Jojo Rabbit", "date":"2020-03-16"},
     {"name":"Journey to the Center of the Earth (2012)"},
     {"name":"Journey 2: The Mysterious Island"},
@@ -151,6 +154,7 @@ let movies = [
     {"name":"Madagascar 3: Europe's Most Wanted"},
     {"name":"Maleficent"},
     {"name":"Mamma Mia"},
+    {"name":"Mark Normand: Out To Lunch"},
     {"name":"Mean Girls"},
     {"name":"Megamind"},
     {"name":"Men in Black"},
@@ -314,8 +318,10 @@ let tv = [
     {"name":"Big Mouth", "seasons":3},
     {"name":"Billions", "seasons":5, "unfinished":1, "unwatched":[2, 3, 4, 5]},
     {"name":"Bojack Horseman", "seasons":6},
+    {"name":"The Boys", "seasons":1},
     {"name":"Brooklyn Nine-Nine", "seasons":6, "unfinished":2, "unwatched":[3, 4, 5, 6]},
     {"name":"Chernobyl", "seasons":1},
+    {"name":"Chihayafuru", "seasons":3, "unwatched":[3]},
     {"name":"Community", "seasons":6, "watches":{1:4, 2:4, 3:4, 4:1, 5:2}},
     {"name":"Cobra Kai", "seasons":2, "unwatched":[2]},
     {"name":"Dark", "seasons":2},
@@ -350,6 +356,7 @@ let tv = [
     {"name":"One Punch Man", "seasons":2, "watches":{1:3}, "unfinished":2},
     {"name":"Parks and Recreation", "seasons":7, "unfinished":6, "unwatched":[7]},
     {"name":"Patriot Act", "seasons":6, "unfinished":6},
+    {"name":"Ramy", "seasons":2},
     {"name":"Rick & Morty", "seasons":4, "unfinished":4},
     {"name":"Sex Education", "seasons":2},
     {"name":"Silicon Valley", "seasons":6, "unwatched":[4, 5, 6]},
@@ -360,7 +367,7 @@ let tv = [
     {"name":"That Time I Got Reincarnated as a Slime", "seasons":1},
     {"name":"Unbreakable Kimmy Schmidt", "seasons":5, "unfinished":1, "unwatched":[2, 3, 4, 5]},
     {"name":"Video Game High School", "seasons":3},
-    {"name":"What We Do in the Shadows", "seasons":1}
+    {"name":"What We Do in the Shadows", "seasons":2}
 ]
 //Watched TV Shows
 
@@ -568,5 +575,7 @@ let books = [
     {"name":"Persepolis", "author":"Marjane Satrapi", "count":2},
     {"name":"What If?", "author":"Randall Munroe", "count":3},
     {"name":"Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made", "author":"Jason Schreier"},
-    {"name":"Good Omens", "author":"Terry Pratchett and Neil Gaiman"}
+    {"name":"Good Omens", "author":"Terry Pratchett and Neil Gaiman"},
+    {"name":"The Colour of Magic", "author":"Terry Pratchett and Neil Gaiman", "series":{"name":"Discworld", "book":1}},
+    {"name":"Foundation", "author":"Isaac Asimov", "series":{"name":"Foundation", "book":1}}
 ]

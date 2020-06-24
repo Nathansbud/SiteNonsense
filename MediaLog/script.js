@@ -1,3 +1,8 @@
+/*
+    Todo:
+        - Sort by dropdown
+*/
+
 movie_list = document.getElementById("movie_list");
 movie_div = document.getElementById("movies");
 
