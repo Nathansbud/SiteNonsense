@@ -41,9 +41,10 @@ window.onload = () => {
         tooltipDiv.appendChild(elemName)
         if('watches' in m) {
             const tt = document.createElement('span')
-            tt.className = 'tooltip-text'
+            tt.className = 'tooltiptext'
             tt.textContent = `Watches: ${m.watches}`
             tooltipDiv.appendChild(tt)
+            elem.classList.add("rewatched")
         } 
 
         elem.appendChild(tooltipDiv)
@@ -80,9 +81,10 @@ window.onload = () => {
             if(i != t.seasons) tooltipDiv.appendChild(document.createTextNode("-"))
             if(t.watches && t.watches[i]) {
                 const tt = document.createElement('span')
-                tt.className = "tooltip-text"
+                tt.className = "tooltiptext"
                 tt.textContent = `Watches: ${t.watches[i]}`
                 tooltipDiv.appendChild(tt)
+                sn.classList.add('rewatched')
             }
             elemDiv.appendChild(tooltipDiv)
             elem.appendChild(elemDiv)

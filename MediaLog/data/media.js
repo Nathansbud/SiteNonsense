@@ -35,6 +35,7 @@ let movies = [
     {"name":"Bohemian Rhapsody"},
     {"name":"Bolt"},
     {"name":"Booksmart", "watches":3},
+    {"name": "Borat"},
     {"name":"Boyhood"},
     {"name":"Brave"},
     {"name":"Bratz"},
@@ -326,16 +327,17 @@ let tv = [
     {"name":"Big Mouth", "seasons":3},
     {"name":"Billions", "seasons":5, "unfinished":1, "unwatched":[2, 3, 4, 5]},
     {"name":"Bojack Horseman", "seasons":6},
-    {"name":"The Boys", "seasons":2, "unfinished":2},
+    {"name":"The Boys", "seasons":2},
     {"name":"Brooklyn Nine-Nine", "seasons":6, "unfinished":2, "unwatched":[3, 4, 5, 6]},
     {"name":"Chernobyl", "seasons":1},
     {"name":"Chihayafuru", "seasons":3},
     {"name":"Community", "seasons":6, "watches":{1:4, 2:4, 3:4, 4:1, 5:2}},
-    {"name":"Cobra Kai", "seasons":2, "unwatched":[2]},
+    {"name":"Cobra Kai", "seasons":2},
     {"name":"Dark", "seasons":3},
     {"name":"Dead to Me", "seasons":2},
-    {"name":"Dr. Stone", "seasons":1},
+    {"name":"Deca-Dence", "seasons":1},
     {"name":"Derry Girls", "seasons":2},
+    {"name":"Dr. Stone", "seasons":1},      
     {"name":"The End of the F***ing World", "seasons":2, "unwatched":[2], "watches":{1:2}},
     {"name":"Fleabag", "seasons":2, "watches":{1:3, 2:2}},
     {"name":"Freaks and Geeks", "seasons":1},
@@ -345,7 +347,7 @@ let tv = [
 	{"name":"The Good Place", "seasons":4},
     {"name":"Gravity Falls", "seasons":2},
     {"name":"The Great", "seasons":1},
-    {"name":"Haikyuu!!", "seasons":4},
+    {"name":"Haikyuu!!", "seasons":4, "unfinished":4},
     {"name":"High School Musical: The Musical: The Series", "seasons":1},
     {"name":"How I Met Your Mother", "seasons":9},
     {"name":"How To Sell Drugs Online (Fast)", "seasons":2},
@@ -370,6 +372,7 @@ let tv = [
     {"name":"Parks and Recreation", "seasons":7, "unfinished":6, "unwatched":[7]},
     {"name":"Patriot Act", "seasons":6, "unfinished":6},
     {"name":"The Politician", "seasons":2, "unwatched":[2]},
+    {"name":"PEN15", "seasons":2, "unwatched":[2]},
     {"name":"Ramy", "seasons":2},
     {"name":"Rick & Morty", "seasons":4, "unfinished":4},
     {"name":"Sex Education", "seasons":2},
@@ -377,13 +380,14 @@ let tv = [
     {"name":"Stranger Things", "seasons":3},
     {"name":"Steins;Gate", "seasons":1},
     {"name":"Steins;Gate 0", "seasons":1},
+    {"name":"Succession", "seasons":2},
     {"name":"Tiger King", "seasons":1},		
     {"name":"That Time I Got Reincarnated as a Slime", "seasons":1},
-    {"name":"Toast of London", "seasons":3, "unfinished":3},
+    {"name":"Toast of London", "seasons":3},
     {"name":"Unbreakable Kimmy Schmidt", "seasons":5, "unfinished":1, "unwatched":[2, 3, 4, 5]},
     {"name":"Undone", "seasons":1},
     {"name":"Video Game High School", "seasons":3},
-    {"name":"What We Do in the Shadows", "seasons":2}
+    {"name":"What We Do in the Shadows", "seasons":2, "watches":{1:2}}
 ]
 //Watched TV Shows
 
@@ -478,6 +482,8 @@ let books = [
     {"name":"How to Seize a Dragon's Jewel", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
     {"name":"How to Betray a Dragon's Hero", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
     {"name":"How to Fight a Dragon's Fury", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+
+    {"name":"Homestuck", "author": "Andrew Hussie"},
 
     {"name":"Naruto", "author":"Masashi Kishimoto"},
     {"name":"Jojo's Bizarre Adventure: Vento Aureo", "author":"Hirohiko Araki", "series":"Jojo's Bizarre Adventure"},
@@ -592,6 +598,12 @@ let books = [
     {"name":"What If?", "author":"Randall Munroe", "count":3},
     {"name":"Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made", "author":"Jason Schreier"},
     {"name":"Good Omens", "author":"Terry Pratchett and Neil Gaiman"},
-    {"name":"The Colour of Magic", "author":"Terry Pratchett and Neil Gaiman", "series":{"name":"Discworld", "book":1}},
-    {"name":"Foundation", "author":"Isaac Asimov", "series":{"name":"Foundation", "book":1}}
+    {"name":"The Colour of Magic", "author":"Terry Pratchett", "series":{"name":"Discworld", "book":1}},
+    {"name":"Foundation", "author":"Isaac Asimov", "series":{"name":"Foundation", "book":1}},
+    
+    {"name":"Do Androids Dream of Electric Sheep?", "author": "Phillip K Dick"},
+    {"name":"The Mezzanine", "author": "Nicholson Baker"},
+    {"name":"Are Prisons Obsolete?", "author": "Angela Davis"},
+    {"name":"The Light Fantastic", "author": "Terry Pratchett", "series":{"name": "Discworld", "book":2}},
+    {"name":"Equal Rites", "author": "Terry Pratchett", "series":{"name": "Discworld", "book":3}},
 ]
