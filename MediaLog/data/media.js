@@ -357,7 +357,7 @@ let tv = [
     {"name":"James Acaster: Repetoire", "seasons":1, "unfinished":1},
     {"name":"Jojo's Bizarre Adventure", "seasons":5, "watches":{1:2}},
     {"name":"Lovesick", "seasons":3},
-    {"name":"Lucifer", "seasons":5, "unfinished":4, "unwatched":[5]},
+    {"name":"Lucifer", "seasons":6, "unfinished":4, "unwatched":[5, 6]},
     {"name": "Made In Abyss", "seasons":1},
     {"name":"The Marvelous Mrs. Maisel", "seasons":3, "unwatched":[3]},
     {"name":"Master of None", "seasons":2, "watches":{1:3, 2:2}},
@@ -486,7 +486,7 @@ let books = [
     {"name":"Homestuck", "author": "Andrew Hussie"},
 
     {"name":"Naruto", "author":"Masashi Kishimoto"},
-    {"name":"Jojo's Bizarre Adventure: Vento Aureo", "author":"Hirohiko Araki", "series":"Jojo's Bizarre Adventure"},
+    {"name":"Jojo's Bizarre Adventure: Vento Aureo", "author":"Hirohiko Araki", "series":{"name":"Jojo's Bizarre Adventure", "book": 5}},
     {"name":"Mob Psycho 100", "author":"ONE"},
     {"name":"Steve Jobs", "author":"Walter Isaacson"},
     {"name":"The Great Gatsby", "author":"F. Scott Fitzgerald"},
@@ -539,14 +539,23 @@ let books = [
     {"name":"Bone: Quest for the Spark, Vol. 1", "author":"Tom Sniegoski", "series":"Bone: Quest for the Spark"},
     {"name":"Bone: Quest for the Spark, Vol. 2", "author":"Tom Sniegoski", "series":"Bone: Quest for the Spark"},
 
-    {"name":"Magyk", "author":"Angie Sage", "series":"Septimus Heap"},
-    {"name":"The Darke Toad", "author":"Angie Sage", "series":"Septimus Heap"},
-    {"name":"Flyte", "author":"Angie Sage", "series":"Septimus Heap"},
-    {"name":"Physik", "author":"Angie Sage", "series":"Septimus Heap"},
-    {"name":"Queste", "author":"Angie Sage", "series":"Septimus Heap"},
-    {"name":"Syren", "author":"Angie Sage", "series":"Septimus Heap"},
-    {"name":"Darke", "author":"Angie Sage", "series":"Septimus Heap"},
-    {"name":"Fyre", "author":"Angie Sage", "series":"Septimus Heap"},
+    {"name":"Magyk", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":1}},
+    {"name":"The Darke Toad", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":2}},
+    {"name":"Flyte", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":3}},
+    {"name":"Physik", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":4}},
+    {"name":"Queste", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":5}},
+    {"name":"Syren", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":6}},
+    {"name":"Darke", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":7}},
+    {"name":"Fyre", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":8}},
+
+    {"name":"Artemis Fowl", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 1}},
+    {"name":"Artemis Fowl and the Arctic Incident", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 2}},
+    {"name":"Artemis Fowl and the Eternity Code", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 3}},
+    {"name":"Artemis Fowl and the Opal Deception", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 4}},
+    {"name":"Artemis Fowl and the Lost Colony", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 5}},
+    {"name":"Artemis Fowl and the Time Paradox", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 6}},
+    {"name":"Artemis Fowl and the Atlantis Complex", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 7}},
+    {"name":"Artemis Fowl and the Last Guardian", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 8}},
 
 
     {"name":"Peter and the Starcatchers", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":1}},
@@ -585,11 +594,17 @@ let books = [
     {"name":"City of Lost Souls", "author":"Cassandra Clare", "series":"The Mortal Instruments"},
     {"name":"City of Heavenly Fire", "author":"Cassandra Clare", "series":"The Mortal Instruments"},
 
-    {"name":"Fablehaven", "author":"Brandon Mull", "series":"Fablehaven"},
-    {"name":"Fablehaven: Rise of the Evening Star", "author":"Brandon Mull", "series":"Fablehaven"},
-    {"name":"Fablehaven: Grip of the Shadow Plague", "author":"Brandon Mull", "series":"Fablehaven"},
-    {"name":"Fablehaven: Secrets of the Dragon Sanctuary", "author":"Brandon Mull", "series":"Fablehaven"},
-    {"name":"Fablehaven: Keys to the Demon Prison", "author":"Brandon Mull", "series":"Fablehaven"},
+    {"name":"Fablehaven", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":1}},
+    {"name":"Fablehaven: Rise of the Evening Star", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":2}},
+    {"name":"Fablehaven: Grip of the Shadow Plague", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":3}},
+    {"name":"Fablehaven: Secrets of the Dragon Sanctuary", "author":"Brandon Mull", "series":{"name": "Fablehaven", "book":4}},
+    {"name":"Fablehaven: Keys to the Demon Prison", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":5}},
+
+    {"name":"The Hitchhiker's Guide to the Galaxy", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":1}},
+    {"name":"The Restaurant at the End of the Universe", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":2}},
+    {"name":"Life, the Univerise, and Everything", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":3}},
+    {"name":"So Long, and Thanks for All the Fish", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":4}},
+
     //this is vaguely chronological from this point on
     {"name":"I Am Not Okay With This", "author":"Charles Forsman"},
     {"name":"Born a Crime", "author":"Trevor Noah"}, 
@@ -606,4 +621,6 @@ let books = [
     {"name":"Are Prisons Obsolete?", "author": "Angela Davis"},
     {"name":"The Light Fantastic", "author": "Terry Pratchett", "series":{"name": "Discworld", "book":2}},
     {"name":"Equal Rites", "author": "Terry Pratchett", "series":{"name": "Discworld", "book":3}},
+    {"name":"Mort", "author":"Terry Pratchett", "series":{"name":"Discworld", "book":4}},
+    {"name":"Dune", "author":"Frank Herbert", "series":{"name":"Dune", "book":1}}
 ]
