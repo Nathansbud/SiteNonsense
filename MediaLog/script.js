@@ -93,10 +93,10 @@ window.onload = () => {
         tvList.appendChild(elem)
     })
 
-    books.forEach(b => {
+    books.reverse().forEach(b => {
         const n = document.createElement("li")
         
-        n.textContent = b.name + " - ["
+        n.textContent = b.name + " ["
         const sn = document.createElement("span")
         if(!('series' in b)) b['series'] = {'name':"", "book":""}
         else if(typeof b['series'] == "string") b['series'] = {'name':b['series'], "book":""}
