@@ -384,6 +384,7 @@ let tv = [
     {"name":"Jojo's Bizarre Adventure", "seasons":5, "watches":{1:2}},
     {"name":"Lovesick", "seasons":3},
     {"name":"Lucifer", "seasons":6, "unfinished":4, "unwatched":[5, 6]},
+    {"name":"Lupin", "seasons":1, "unfinished":1},
     {"name": "Made In Abyss", "seasons":1},
     {"name":"The Marvelous Mrs. Maisel", "seasons":3, "unwatched":[3]},
     {"name":"Master of None", "seasons":2, "watches":{1:3, 2:2}},
@@ -671,5 +672,7 @@ let books = [
 
     {"name":"Eric", "author":"Terry Pratchett", "series":{"name":"Discworld", "book":9}, "date": 2021},
     {"name":"Brain on Fire: My Month of Madness", "author":"Susannah Cahalan", "date": 2021},
-    {"name":"My Brilliant Friend", "author":"Elena Ferrante", "series":{"name":"Neopolitan Novels", "book":1}, "date": "2020-01-15"},
+    {"name":"My Brilliant Friend", "author":"Elena Ferrante", "series":{"name":"Neopolitan Novels", "book":1}, "date": "2021-01-15"},
+    {"name":"Moving Pictures", "author":"Terry Pratchett", "series":{"name":"Discworld", "book":10}, "date": "2021-01-23"},
+    {"name":"Manifesto of the Communist Party", "author":"Karl Marx and Friedrich Engels", "date":"2021-01-24"}
 ]
