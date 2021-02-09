@@ -345,10 +345,10 @@ let tv = [
     {"name":"Archer", "seasons":10, "unfinished":8, "unwatched":[9, 10]},
     {"name":"Arrested Development", "seasons":3, "watches":{1:2, 2:2, 3:2}},
     {"name":"Atlanta", "seasons":2},
+    {"name":"Attack on Titan", "seasons":4, "unfinished": 4},
     {"name":"Better Off Ted", "seasons":2},
     {"name":"Big Brother", "seasons":21, "unwatched":[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 21]},
     {"name":"Big Mouth", "seasons":4},
-    {"name":"Billions", "seasons":5, "unfinished":1, "unwatched":[2, 3, 4, 5]},
     {"name":"Bojack Horseman", "seasons":6},
     {"name":"The Boys", "seasons":2},
     {"name":"Bridgerton", "seasons":1},
@@ -380,7 +380,6 @@ let tv = [
     {"name":"I Am Not Okay With This", "seasons":1},
     {"name":"I Think You Should Leave", "seasons":1},
     {"name":"It's Always Sunny in Philadelphia", "seasons":14, "unfinished":4, "unwatched":[5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
-    {"name":"James Acaster: Repetoire", "seasons":1, "unfinished":1},
     {"name":"Jojo's Bizarre Adventure", "seasons":5, "watches":{1:2}},
     {"name":"Lovesick", "seasons":3},
     {"name":"Lucifer", "seasons":6, "unfinished":4, "unwatched":[5, 6]},
@@ -392,7 +391,7 @@ let tv = [
     {"name":"The Midnight Gospel", "seasons":1},
     {"name":"Mob Psycho 100", "seasons":2, "watches":{1:3}},
     {"name":"Modern Family", "seasons":11, "unwatched":[7, 8, 9, 10, 11]},
-    {"name":"My Hero Academia", "seasons":4, "unfinished":4},
+    {"name":"My Hero Academia", "seasons":4},
     {"name":"Never Have I Ever", "seasons":1},
     {"name":"The Office", "seasons":9, "unfinished":6, "unwatched":[1, 7, 8, 9]},
     {"name":"One Punch Man", "seasons":2, "watches":{1:3}, "unfinished":2},
@@ -401,7 +400,7 @@ let tv = [
     {"name":"The Politician", "seasons":2, "unwatched":[2]},
     {"name":"PEN15", "seasons":2, "unwatched":[2]},
     {"name":"Ramy", "seasons":2},
-    {"name":"Rick & Morty", "seasons":4, "unfinished":4},
+    {"name":"Rick & Morty", "seasons":4},
     {"name":"Sex Education", "seasons":2},
     {"name":"Silicon Valley", "seasons":6, "unwatched":[4, 5, 6]},
     {"name":"Stranger Things", "seasons":3},
@@ -418,25 +417,23 @@ let tv = [
 ]
 //Watched TV Shows
 
-
 let books = [
-    {"name":"Flatland", "author":"Edwin Abbott Abbott"},
-    {"name":"Game Feel", "author":"Steve Swink"},
-    {"name":"Spelunky", "author":"Derek Yu"},
+	{"name": "Where the Sidewalk Ends", "author": "Shel Silverstein"},
+    {"name": "Falling Up", "author": "Shel Silverstein"},
+    {"name": "A Light in the Attic", "author": "Shel Silverstein"},
 
-    {"name":"The Name of this Book is Secret", "author":"Pseudonymous Bosch", "series":"The Secret Series"},
-    {"name":"If You're Reading This, It's Too Late", "author":"Pseudonymous Bosch", "series":"The Secret Series"},
-    {"name":"This Book Is Not Good for You", "author":"Pseudonymous Bosch", "series":"The Secret Series"},
-    {"name":"This Isn't What It Looks Like", "author":"Pseudonymous Bosch", "series":"The Secret Series"},
-    {"name":"You Have to Stop This", "author":"Pseudonymous Bosch", "series":"The Secret Series"},
+    {"name": "Gossamer", "author":"Louis Lowry"},
 
-    {"name":"Hyperion", "author":"Dan Simmons", "series":"Hyperion Cantos"},
-    {"name":"The Name of the Wind", "author":"George R. R. Martin", "series":"A Song of Ice and Fire"},
-    {"name":"The Wise Man's Fear", "author":"George R. R. Martin", "series":"A Song of Ice and Fire"},
-    {"name":"A Game of Thrones", "author":"George R. R. Martin", "series":"A Song of Ice and Fire"},
-    {"name":"A Clash of Kings", "author":"George R. R. Martin", "series":"A Song of Ice and Fire"},
-    {"name":"A Storm of Swords", "author":"George R. R. Martin", "series":"A Song of Ice and Fire"},
-    {"name":"A Feast for Crows", "author":"George R. R. Martin", "series":"A Song of Ice and Fire"},
+    {"name":"Diary of a Wimpy Kid", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Rodrick Rules", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Last Straw", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Dog Days", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Ugly Truth", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Cabin Fever", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Third Wheel", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"Hard Luck", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+    {"name":"The Long Haul", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
+
     {"name":"Harry Potter and the Sorcerer's Stone", "author":"J.K. Rowling", "series":"Harry Potter"},
     {"name":"Harry Potter and the Chamber of Secrets", "author":"J.K. Rowling", "series":"Harry Potter"},
     {"name":"Harry Potter and the Prisoner of Azkaban", "author":"J.K. Rowling", "series":"Harry Potter"},
@@ -454,101 +451,33 @@ let books = [
     {"name":"The Mark of Athena", "author":"Rick Riordan", "series":"The Heroes of Olympus"},
     {"name":"The House of Hades", "author":"Rick Riordan", "series":"The Heroes of Olympus"},
     {"name":"The Blood of Olympus", "author":"Rick Riordan", "series":"The Heroes of Olympus"},
+    
     {"name":"The Red Pyramid", "author":"Rick Riordan", "series":"Kane Chronicles"},
     {"name":"The Throne of Fire", "author":"Rick Riordan", "series":"Kane Chronicles"},
     {"name":"The Serpent's Shadow", "author":"Rick Riordan", "series":"Kane Chronicles"},
-    {"name":"I'll Give You the Sun", "author":"Jandy Nelson"},
-
+    
     {"name":"Holes", "author":"Louis Sachar"},
     {"name":"Stargirl", "author":"Jerry Spinelli", "series":"Stargirl"},
     {"name":"Love, Stargirl", "author":"Jerry Spinelli", "series":"Stargirl"},
-    {"name":"The Fault in Our Stars", "author":"John Green"},
-
-    {"name":"Divergent", "author":"Veronica Roth", "series":"Divergent"},
-    {"name":"Insurgent", "author":"Veronica Roth", "series":"Divergent"},
-    {"name":"Allegient", "author":"Veronica Roth", "series":"Divergent"},
-
+    
     {"name":"Gregor the Overlander", "author":"Suzanne Collins", "series":"The Underland Chronicles"},
     {"name":"Gregor and the Prophecy of Bane", "author":"Suzanne Collins", "series":"The Underland Chronicles"},
     {"name":"Gregor and the Curse of the Warmbloods", "author":"Suzanne Collins", "series":"The Underland Chronicles"},
     {"name":"Gregor and the Marks of Secret", "author":"Suzanne Collins", "series":"The Underland Chronicles"},
     {"name":"Gregor and the Code of Claw", "author":"Suzanne Collins", "series":"The Underland Chronicles"},
 
-    {"name":"The Amulet of Samarkand", "author":"Jonathan Shroud", "series":"Bartimaeus Sequence"},
-    {"name":"The Golem's Eye", "author":"Jonathan Shroud", "series":"Bartimaeus Sequence"},
-    {"name":"Ptolemy's Gate", "author":"Jonathan Shroud", "series":"Bartimaeus Sequence"},
-    {"name":"The Ring of Solomon", "author":"Jonathan Shroud", "series":"Bartimaeus Sequence"},
-
-    {"name":"Skulduggery Pleasant", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Playing with Fire", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"The Faceless Ones", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Dark Days", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Mortal Coil", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Death Bringer", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Kingdom of the Wicked", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Last Stand of Dead Men", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"The Dying of the Light", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"The End of the World", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Tanith Low in... The Maleficent Seven", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
-    {"name":"Armageddon Outta Here", "author":"Derek Landy", "series":"Skulduggery Pleasant"},
+    {"name":"The Amulet of Samarkand", "author":"Jonathan Stroud", "series":"Bartimaeus Sequence"},
+    {"name":"The Golem's Eye", "author":"Jonathan Stroud", "series":"Bartimaeus Sequence"},
+    {"name":"Ptolemy's Gate", "author":"Jonathan Stroud", "series":"Bartimaeus Sequence"},
+    {"name":"The Ring of Solomon", "author":"Jonathan Stroud", "series":"Bartimaeus Sequence"},
 
     {"name":"The Hunger Games", "author":"Suzanne Collins", "series":"The Hunger Games"},
     {"name":"Catching Fire", "author":"Suzanne Collins", "series":"The Hunger Games"},
     {"name":"Mockingjay", "author":"Suzanne Collins", "series":"The Hunger Games"},
     
-    {"name":"How to Train Your Dragon", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Be A Pirate", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Speak Dragonese", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Cheat a Dragon's Curse", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Twist a Dragon's Tale", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"A Hero's Guide To Deadly Dragons", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Ride a Dragon's Storm", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Break a Dragon's Heart", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Steal a Dragon's Sword", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Seize a Dragon's Jewel", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Betray a Dragon's Hero", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-    {"name":"How to Fight a Dragon's Fury", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
-
-    {"name":"Homestuck", "author": "Andrew Hussie"},
-
-    {"name":"Naruto", "author":"Masashi Kishimoto"},
-    {"name":"Jojo's Bizarre Adventure: Vento Aureo", "author":"Hirohiko Araki", "series":{"name":"Jojo's Bizarre Adventure", "book": 5}},
-    {"name":"Mob Psycho 100", "author":"ONE"},
-    {"name":"Steve Jobs", "author":"Walter Isaacson"},
-    {"name":"The Great Gatsby", "author":"F. Scott Fitzgerald"},
-    {"name":"Purple Hibiscus", "author":"Chimamanda Ngozi Adichie"},
-    {"name":"The Particular Sadness of Lemon Cake", "author":"Aimee Bender"},
-    {"name":"Candor", "author":"Pam Bachorz"},
-
-    {"name":"Gone", "author":"Michael Grant", "series":"Gone"},
-    {"name":"Lies", "author":"Michael Grant", "series":"Gone"},
-    {"name":"Plague", "author":"Michael Grant", "series":"Gone"},
-    {"name":"Fear", "author":"Michael Grant", "series":"Gone"},
-    {"name":"Light", "author":"Michael Grant", "series":"Gone"},  
-
-    {"name":"The Graveyard Book", "author":"Neil Gaiman"},
-    {"name":"American Gods", "author":"Neil Gaiman"},
-
-    {"name":"Diary of a Wimpy Kid", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"Rodrick Rules", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"The Last Straw", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"Dog Days", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"The Ugly Truth", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"Cabin Fever", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"The Third Wheel", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"Hard Luck", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    {"name":"The Long Haul", "author":"Jeff Kinney", "series":"Diary of a Wimpy Kid"},
-    
-    {"name":"The Hero's Guide to Saving Your Kingdom", "author":"Christopher Healy", "series":"The League of Princes"},
-    {"name":"The Hero's Guide to Storming the Castle", "author":"Christopher Healy", "series":"The League of Princes"},
-    {"name":"The Hero's Guide to Being an Outlaw", "author":"Christopher Healy", "series":"The League of Princes"},
-
     {"name":"Tunnels", "author":"Roderick Gordon", "series":"Tunnels"},
     {"name":"Deeper", "author":"Roderick Gordon", "series":"Tunnels"},
-
-    {"name":"The Giver", "author":"Louis Lowry"},
-    {"name":"Gossamer", "author":"Louis Lowry"},
-    
+  
     {"name":"Bone, Vol, 1: Out from Boneville", "author":"Jeff Smith", "series":"Bone"},
     {"name":"Bone, Vol. 2: The Great Cow Race", "author":"Jeff Smith", "series":"Bone"},
     {"name":"Bone, Vol. 3: Eyes of the Storm", "author":"Jeff Smith", "series":"Bone"},
@@ -562,8 +491,8 @@ let books = [
     {"name":"Tall Tales", "author":"Jeff Smith", "series":"Bone"},
     {"name":"Bone: Stupid Stupid Rat-Tails", "author":"Jeff Smith", "series":"Bone"},
 
-    {"name":"Bone: Quest for the Spark, Vol. 1", "author":"Tom Sniegoski", "series":"Bone: Quest for the Spark"},
-    {"name":"Bone: Quest for the Spark, Vol. 2", "author":"Tom Sniegoski", "series":"Bone: Quest for the Spark"},
+    {"name":"Bone: Quest for the Spark, Vol. 1", "author":"Tom Sniegoski", "series":{"name": "Bone: Quest for the Spark", "book": 1}},
+    {"name":"Bone: Quest for the Spark, Vol. 2", "author":"Tom Sniegoski", "series":{"name": "Bone: Quest for the Spark", "book": 2}},
 
     {"name":"Magyk", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":1}},
     {"name":"The Darke Toad", "author":"Angie Sage", "series":{"name":"Septimus Heap", "book":2}},
@@ -583,60 +512,251 @@ let books = [
     {"name":"Artemis Fowl and the Atlantis Complex", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 7}},
     {"name":"Artemis Fowl and the Last Guardian", "author":"Eoin Colfer", "series":{"name":"Artemis Fowl", "book": 8}},
 
-
     {"name":"Peter and the Starcatchers", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":1}},
     {"name":"Peter and the Shadow Thieves", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":2}},
     {"name":"Peter and the Secret of Rundoon", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":3}},
     {"name":"Peter and the Sword of Mercy", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":4}},
     {"name":"The Bridge to Never Land", "author":"Dave Barry", "series":{"name":"Peter and the Starcatchers", "book":5}},
-    {"name":"Watchmen", "author":"Alan Moore"},
-
-    {"name":"Legend", "author": "Marie Lu", "series":{"name":"Legend", "book":1}},
-    {"name":"Prodigy", "author": "Marie Lu", "series":{"name":"Legend", "book":2}},
-    {"name":"Champion", "author": "Marie Lu", "series":{"name":"Legend", "book":3}},
-
-    {"name":"Ready Player One", "author":"Ernest Cline"},
-
-    {"name":"The Way of Kings", "author":"Brandon Sanderson", "series":"The Stormlight Archive"},
-    {"name":"Words of Radiance", "author":"Brandon Sanderson", "series":"The Stormlight Archive"},
-
     {"name":"Candor", "author":"Pam Bachorz"},
-
-    {"name":"The Giver", "author":"Louis Lowry", "count":2},
-    {"name":"Gossamer", "author":"Louis Lowry"},
-
-    {"name":"The Alchemist", "author":"Paulo Coelho"}, 
-    {"name":"1984", "author":"George Orwell"},
-    {"name":"Fahrenheit 451", "author":"Ray Bradbury"},
-    {"name":"To Kill a Mockingbird", "author":"Harper Lee"},
-    {"name":"Frankenstein", "author":"Mary Shelley", "count":2},
-
-    {"name":"Ender's Game", "author":"Orson Scott Card", "series":{"name":"Ender's Game", "book":1}},
-    {"name":"Speaker for the Dead", "author":"Orson Scott Card", "series":{"name":"Ender's Game", "book":2}},
-
-    {"name":"City of Bones", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 1}},
-    {"name":"City of Ashes", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 2}},
-    {"name":"City of Glass", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 3}},
-    {"name":"City of Fallen Angels", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 4}},
-    {"name":"City of Lost Souls", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 5}},
-    {"name":"City of Heavenly Fire", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 6}},
 
     {"name":"Fablehaven", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":1}},
     {"name":"Fablehaven: Rise of the Evening Star", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":2}},
     {"name":"Fablehaven: Grip of the Shadow Plague", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":3}},
     {"name":"Fablehaven: Secrets of the Dragon Sanctuary", "author":"Brandon Mull", "series":{"name": "Fablehaven", "book":4}},
     {"name":"Fablehaven: Keys to the Demon Prison", "author":"Brandon Mull", "series":{"name":"Fablehaven", "book":5}},
+    {"name": "Code Name Verity", "author": "Elizabeth Wein"},
 
-    {"name":"The Hitchhiker's Guide to the Galaxy", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":1}},
-    {"name":"The Restaurant at the End of the Universe", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":2}},
-    {"name":"Life, the Univerise, and Everything", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":3}},
-    {"name":"So Long, and Thanks for All the Fish", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":4}},
-
-    {"name":"Prog Rock FAQ", "author":"Will Romano"},
-    //this is vaguely chronological from this point on
-    {"name":"King Lear", "author":"William Shakespeare", "date": 2018},
-    {"name":"One Flew Over the Cuckoo's Nest", "author":"Ken Kesey", "count": 2, "date":2018},
+    {"name":"How to Train Your Dragon", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Be A Pirate", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Speak Dragonese", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Cheat a Dragon's Curse", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Twist a Dragon's Tale", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"A Hero's Guide To Deadly Dragons", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Ride a Dragon's Storm", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Break a Dragon's Heart", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Steal a Dragon's Sword", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Seize a Dragon's Jewel", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Betray a Dragon's Hero", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+    {"name":"How to Fight a Dragon's Fury", "author":"Cressida Cowell", "series":"How to Train Your Dragon"},
+ 
+    //End of Elementary School
+    "Elementary School",
     
+    //Start of Middle School
+    {"name":"Skulduggery Pleasant", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 1}, "date": 2012},
+    {"name":"Playing with Fire", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 2}, "date": 2012},
+    {"name":"The Faceless Ones", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 3}, "date": 2012},
+    {"name":"Dark Days", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 4}, "date": 2012},
+    {"name":"Mortal Coil", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 5}, "date": 2012},
+    {"name":"Death Bringer", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 6}, "date": 2012},
+    {"name":"The End of the World", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 6.5}, "date": 2012},
+    {"name":"Kingdom of the Wicked", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 7}, "date": 2012},
+    {"name":"Tanith Low in... The Maleficent Seven", "author":"Derek Landy",  "series":{"name": "Skulduggery Pleasant", "book": 7.5}, "date": 2013},
+    {"name":"Last Stand of Dead Men", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 8}, "date": 2013},
+    {"name":"Armageddon Outta Here", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant"}, "date": 2014},
+    {"name":"The Dying of the Light", "author":"Derek Landy", "series":{"name": "Skulduggery Pleasant", "book": 9}, "date": 2014},
+   
+    {"name":"The Name of this Book is Secret", "author":"Pseudonymous Bosch", "series":{"name": "The Secret Series", "book": 1}, "date": 2013},
+    {"name":"If You're Reading This, It's Too Late", "author":"Pseudonymous Bosch", "series":{"name": "The Secret Series", "book": 2}, "date": 2013},
+    {"name":"This Book Is Not Good for You", "author":"Pseudonymous Bosch", "series":{"name": "The Secret Series", "book": 3}, "date": 2013},
+    {"name":"This Isn't What It Looks Like", "author":"Pseudonymous Bosch", "series":{"name": "The Secret Series", "book": 4}, "date": 2013},
+    {"name":"You Have to Stop This", "author":"Pseudonymous Bosch", "series":{"name": "The Secret Series", "book": 5}, "date": 2013},
+
+    {"name":"Eon: Dragoneye Reborn", "author":"Alison Goodman", "series":{"name": "Eon", "book": 1}, "date": 2013},
+    {"name":"Eona: The Last Dragoneye", "author":"Alison Goodman", "series":{"name": "Eon", "book": 2}, "date": 2013},
+    {"name":"Kingdom Keepers", "author":"Ridley Pearson", "series":{"name": "The Kingdom Keepers", "book": 1}, "date": 2013},
+    {"name": "The Dead Days Omnibus", "author": "Marcus Sedgwick", "date": 2013},
+    {"name": "The Grimm Legacy", "author": "Polly Shulman", "date": 2013},
+	{"name": "Incarceron", "author": "Catherine Fisher", "series": {"name": "Incarceron", "book": 1}, "date": 2013},
+    {"name": "Traitor", "author": "Andy McNab", "series": {"name": "Boy Soldier", "book": 1}, "date": 2013},
+    {"name": "The True Meaning of Smekday", "author": "Adam Rex", "series": {"name": "Smek Smeries", "book": 1}, "date": 2013},
+    {"name": "Z", "author": "Michael Thomas Ford", "date": 2013},
+    {"name": "The Tomorrow Code", "author": "Brian Falkner", "date": 2013},
+    {"name": "The Water Wars", "author": "Cameron Stracher", "date": 2013},		
+    
+    {"name":"Gone", "author":"Michael Grant", "series": {"name": "Gone", "book": 1}, "date": 2013},
+    {"name":"Lies", "author":"Michael Grant", "series": {"name": "Gone", "book": 2}, "date": 2013},
+    {"name":"Plague", "author":"Michael Grant","series": {"name": "Gone", "book": 3}, "date": 2013},
+    {"name":"Fear", "author":"Michael Grant", "series": {"name": "Gone", "book": 4}, "date": 2013},
+    {"name":"Light", "author":"Michael Grant","series": {"name": "Gone", "book": 5}, "date": 2013},
+
+	{"name":"Divergent", "author":"Veronica Roth", "series": {"name": "Divergent", "book": 1}, "date": 2013},
+    {"name":"Insurgent", "author":"Veronica Roth", "series": {"name": "Divergent", "book": 2}, "date": 2013},
+    {"name":"Allegient", "author":"Veronica Roth", "series": {"name": "Divergent", "book": 3}, "date": 2013},
+
+    {"name":"Legend", "author": "Marie Lu", "series":{"name":"Legend", "book":1}, "date": 2013},
+    {"name":"Prodigy", "author": "Marie Lu", "series":{"name":"Legend", "book":2}, "date": 2013},
+    {"name":"Champion", "author": "Marie Lu", "series":{"name":"Legend", "book":3}, "date": 2013},
+    {"name": "The House of Power", "author": "Patrick Carman", "series": {"name": "Atherton", "book": 1}, "date": 2013},
+    
+    {"name": "The Shadow Thieves", "author": "Annie Ursu", "series": {"name": "Cronus Chronicles", "book": 1}, "date": 2013},
+    {"name": "The Siren Song", "author": "Annie Ursu", "series": {"name": "Cronus Chronicles", "book": 2}, "date": 2013},
+    {"name": "The Immortal Fire", "author": "Annie Ursu", "series": {"name": "Cronus Chronicles", "book": 3}, "date": 2013},
+
+    {"name": "Heroes of the Valley", "author": "Jonathan Stroud", "date": 2013},
+	{"name":"Ender's Game", "author":"Orson Scott Card", "series":{"name":"Ender's Game", "book":1}, "date": 2013},
+	{"name":"Speaker for the Dead", "author":"Orson Scott Card", "series":{"name":"Ender's Game", "book":2}, "date": 2013},
+	{"name": "Kringle", "author": "Tony Abbott", "date": 2013},
+	{"name": "Blackbringer", "author": "Laini Taylor", "date": 2013},
+   
+	{"name":"City of Bones", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 1}, "date": 2013},
+    {"name":"City of Ashes", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 2}, "date": 2013},
+    {"name":"City of Glass", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 3}, "date": 2013},
+    {"name":"City of Fallen Angels", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 4}, "date": 2013},
+    {"name":"City of Lost Souls", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 5}, "date": 2013},
+    {"name":"City of Heavenly Fire", "author":"Cassandra Clare","series":{"name":"The Mortal Instruments", "book": 6}, "date": 2013},
+    {"name": "The Hobbit", "author": "J.R.R Tolkien", "series": {"name": "The Lord of the Rings", "book": 0}, "date": 2013},
+    {"name":"The Graveyard Book", "author":"Neil Gaiman", "date": 2013},
+	{"name":"Ready Player One", "author":"Ernest Cline", "date": 2013},    
+
+    {"name":"BZRK", "author":"Michael Grant", "series": {"name": "BZRK", "book": 1}, "date": 2014},
+    {"name":"Steve Jobs", "author":"Walter Isaacson", "date": 2014},
+
+    {"name":"The Hitchhiker's Guide to the Galaxy", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":1}, "date": 2014},
+    {"name":"The Restaurant at the End of the Universe", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":2}, "date": 2014},
+    {"name":"Life, the Univerise, and Everything", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":3}, "date": 2014},
+    {"name":"So Long, and Thanks for All the Fish", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":4}, "date": 2014},
+    {"name":"Mostly Harmless", "author":"Douglas Adams", "series":{"name":"The Hitchhiker's Guide to the Galaxy", "book":5}, "date": 2014},
+    {"name":"The Curious Incident of the Dog in the Night-Time", "author":"Mark Haddon", "date": 2014},
+    
+    {"name": "Reckless", "author": "Cornelia Funke", "series": {"name": "Mirrorworld", "book": 1}, "date": 2014},
+    {"name": "Inkheart", "author": "Cornelia Funke", "series": {"name": "Inkheart", "book": 1}, "date": 2014},
+    {"name": "Endymion Spring", "author": "Matthew Skelton", "date": 2014},
+    {"name": "Scored", "author": "Lauren McLaughlin", "date": 2014},
+    {"name": "There is No Dog", "author": "Meg Rosoff", "date": 2014},
+    {"name": "The Jumbee", "author": "Pamela Keyes", "date": 2014},
+
+    {"name": "Ashfall", "author": "Mike Mullen", "series": {"name": "Ashfall", "book": 1}, "date": 2014},
+	{"name": "Double Helix", "author": "Nancy Werlin", "date": 2014},    
+	{"name": "Wake", "author": "Lisa McMann", "date": 2014},
+	{"name": "All These Things I’ve Done", "author": "Gabrielle Zevin", "date": 2014},
+	{"name": "Shiver", "author": "Maggie Stiefvater", "date": 2014},
+	{"name": "Linger", "author": "Maggie Stiefvater", "date": 2014},
+	{"name": "Variant", "author": "Robison Wells", "date": 2014},
+
+	{"name": "Beautiful Creatures", "author": "Margaret Stohl and Kami Garcia", "series": {"name": "Caster Chronicles", "book": 1}, "date": 2014},
+	{"name": "Beautiful Darkness", "author": "Margaret Stohl and Kami Garcia", "series": {"name": "Caster Chronicles", "book": 2}, "date": 2014},
+	{"name": "Beautiful Chaos", "author": "Margaret Stohl and Kami Garcia", "series": {"name": "Caster Chronicles", "book": 3}, "date": 2014},
+	{"name": "Beautiful Redemption", "author": "Margaret Stohl and Kami Garcia", "series": {"name": "Caster Chronicles", "book": 4}, "date": 2014},
+	
+	{"name": "The Reformed Vampire Support Group", "author": "Catherine Jinks", "date": 2014},
+	{"name": "Evil Genius", "author": "Catherine Jinks", "series": {"name": "Genius Series", "book": 1}, "date": 2014},
+	{"name": "Genius Squad", "author": "Catherine Jinks", "series": {"name": "Genius Series", "book": 2}, "date": 2014},
+	{"name": "The Genius Wars", "author": "Catherine Jinks", "series": {"name": "Genius Series", "book": 3}, "date": 2014},
+	
+	{"name": "Spacer and Rat", "author": "Margaret Bechard", "date": 2014},
+	{"name": "Enchanted", "author": "Aletha Kothis", "date": 2014},
+
+	{"name":"The Hero's Guide to Saving Your Kingdom", "author":"Christopher Healy", "series": {"name": "The League of Princes", "book": 1}, "date": 2014},
+    {"name":"The Hero's Guide to Storming the Castle", "author":"Christopher Healy", "series": {"name": "The League of Princes", "book": 2}, "date": 2014},
+    {"name":"The Hero's Guide to Being an Outlaw", "author":"Christopher Healy", "series": {"name": "The League of Princes", "book": 3}, "date": 2014},
+
+    {"name":"The Rapture of the Nerds", "author":"Cory Doctorow and Charles Stross", "date": 2014},
+    {"name":"Kalevala", "author":"Elias Lönnrot", "date": 2014},
+    {"name":"Beta", "author":"Rachel Cohn", "date": 2014},
+    {"name":"Monopoly: The World’s Most Famous Game and How it Got That Way", "author":"Philip E. Orbanes", "date": 2014},
+    {"name":"The Fault in Our Stars", "author":"John Green", "date": 2014},
+    {"name":"The 13 ½ Lives of Captain Bluebear", "author":"Walter Moers", "date": 2014},
+    {"name":"Predictably Irrational", "author":"Dan Ariely", "date": 2014},
+    {"name":"Now You See It", "author":"Cathy Davidson", "date": 2014},
+    {"name":"American Gods", "author":"Neil Gaiman", "date": 2014},
+
+	{"name":"The Giver", "author":"Louis Lowry", "count":2, "date": 2014},
+	{"name": "H.I.V.E.: Higher Institute of Villainous Education", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 1}, "book": 2014},
+	{"name": "H.I.V.E.: The Overlord Protocol", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 2}, "book": 2014},
+	{"name": "H.I.V.E.: Escape Velocity", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 3}, "book": 2014},
+	{"name": "H.I.V.E.: Dreadnought", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 4}, "book": 2014},
+	{"name": "H.I.V.E.: Rogue", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 5}, "book": 2014},
+	{"name": "H.I.V.E.: Zero Hour", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 6}, "book": 2014},
+	{"name": "H.I.V.E.: Aftershock", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 7}, "book": 2014},
+	{"name": "H.I.V.E.: Deadlock", "author": "Mark Walden", "series": {"name": "H.I.V.E.", "book": 8}, "book": 2014},
+
+	{"name": "Clockwork Angel", "author": "Cassandra Clare", "series": {"name": "The Infernal Devices", "book": 1}, "date": 2014},
+	{"name": "The Young Elites", "author": "Marie Lu", "series": {"name": "The Young Elites", "book": 1}, "book": 2014},
+	{"name": "The Program", "author": "Suzanne Young", "series": {"name": "The Program", "book": 1}, "date": 2014},
+	{"name": "Tithe", "author": "Holly Black", "series": {"name": "Modern Faerie Tales", "book": 1}, "date": 2014},
+	{"name": "World War Z", "author": "Max Brooks", "date": 2014},
+
+	{"name": "Insignia", "author": "S.J. Kincaid", "series": {"name": "Insignia", "book": 1}, "date": 2015},
+	{"name": "Vortex", "author": "S.J. Kincaid", "series": {"name": "Insignia", "book": 2}, "date": 2015},
+	{"name": "Catalyst", "author": "S.J. Kincaid", "series": {"name": "Insignia", "book": 3}, "date": 2015},
+	{"name": "The Magicians", "author": "Lev Grossman", "series": {"name": "The Magicians", "book": 1}, "date": 2015},
+	{"name": "The Magician King", "author": "Lev Grossman", "series": {"name": "The Magicians", "book": 2}, "date": 2015},
+	{"name": "The Magician's Land", "author": "Lev Grossman", "series": {"name": "The Magicians", "book": 3}, "date": 2015},
+	{"name": "Coda", "author": "Emma Trevayne", "series": {"name": "Coda", "book": 1}, "date": 2015},
+	{"name": "Black Hole Sun", "author": "David Macinnis Gill", "series": {"name": "Hell's Cross", "book": 1}, "date": 2015},
+	
+    {"name":"Homestuck", "author":"Andrew Hussie", "date": 2015},
+
+    {"name":"Night", "author":"Elie Wiesel", "date": 2015},
+	{"name":"Zig Zag", "author": "José Carlos Somoza", "date": 2015},
+	{"name":"Crusade", "author": "Elizabeth Laird", "date": 2015},
+	
+	{"name": "The Maze Runner", "author": "James Dashner", "series": {"name": "The Maze Runner", "book": 1}, "date": 2015},
+	{"name": "The Scorch Trials", "author": "James Dashner", "series": {"name": "The Maze Runner", "book": 2}, "date": 2015},
+	{"name": "The Death Cure", "author": "James Dashner", "series": {"name": "The Maze Runner", "book": 3}, "date": 2015},
+	{"name": "The Divide", "author": "Elizabeth Kay", "series": {"name": "The Divide", "book": 3}, "date": 2015},
+
+	{"name": "Across the Universe", "author": "Beth Revis", "series": {"name": "Across the Universe", "book": 1}, "date": 2015},
+	{"name": "A Million Suns", "author": "Beth Revis", "series": {"name": "Across the Universe", "book": 2}, "date": 2015},
+	{"name": "Shades of Earth", "author": "Beth Revis", "series": {"name": "Across the Universe", "book": 3}, "date": 2015},	
+    
+	{"name":"The Name of the Wind", "author":"Patrick Rothfuss", "series":{"name":"The Kingkiller Chronicles", "book": 1}, "date": 2015},
+    {"name":"The Wise Man's Fear", "author":"Patrick Rothfuss", "series":{"name":"The Kingkiller Chronicles", "book": 2}, "date": 2015},
+    
+    {"name":"A Game of Thrones", "author":"George R. R. Martin", "series":{"name": "A Song of Ice and Fire",  "book": 1}, "date": 2015},
+    {"name":"A Clash of Kings", "author":"George R. R. Martin", "series":{"name": "A Song of Ice and Fire",  "book": 2}, "date": 2015},
+    {"name":"A Storm of Swords", "author":"George R. R. Martin", "series":{"name": "A Song of Ice and Fire",  "book": 3}, "date": 2015},
+    {"name":"A Feast for Crows", "author":"George R. R. Martin", "series":{"name": "A Song of Ice and Fire",  "book": 4}, "date": 2015},
+
+    {"name": "The Tipping Point", "author": "Malcolm Gladwell", "date": 2015},
+	{"name": "The Magicians' Guild", "author": "Trudi Canavan", "series": {"name": "The Black Magician", "book": 1}, "date": 2015},
+	{"name": "What If?", "author":"Randall Munroe", "count":4, "date": 2015},
+	
+	{"name":"Fahrenheit 451", "author":"Ray Bradbury", "date": 2015},
+	{"name":"To Kill a Mockingbird", "author":"Harper Lee", "date": 2015},
+	{"name":"Looking for Alaska", "author":"John Green", "date": 2015},
+	{"name":"The Immortal Life of Henrietta Lacks", "author":"Rebecca Skloot", "date": 2015},
+	{"name": "The Elegance of the Hedgehog", "author": "Muriel Barbery", "date": 2015},
+	{"name": "Tomorrow, When the War Began", "author": "John Marsden", "series": {"name": "Tomorrow", "book": 1}, "date": 2015},
+	{"name": "One Night @ The Call Center", "author": "Chetan Bhagat", "date": 2015},
+	{"name": "Secret Letters from the Monk Who Sold His Ferrari", "author": "Robin Sharma", "date": 2015},	
+	{"name": "I Am The Cheese", "author": "Robert Cormier", "date": 2015},
+	
+	{"name":"Naruto", "author":"Masashi Kishimoto", "date": 2015},
+
+	{"name": "The Princess Bride", "author": "William Goldman", "date": 2015},
+	{"name":"The Martian", "author":"George Orwell", "date": 2015},
+	{"name":"The Alchemist", "author":"Paulo Coelho", "date": 2015}, 
+	{"name":"1984", "author":"George Orwell", "date": 2015},
+	{"name": "Battle Hymn of the Tiger Mother", "author": "Amy Chua", "date": 2015},
+	{"name":"I'll Give You the Sun", "author":"Jandy Nelson", "date": 2016},
+    
+    //End of Middle School
+    "Middle School",
+
+    //Start of High School
+    {"name":"The Particular Sadness of Lemon Cake", "author":"Aimee Bender", "date": 2016},
+    {"name":"Game Feel", "author":"Steve Swink", "date": 2016},
+    {"name":"Spelunky", "author":"Derek Yu", "date": 2016},	
+	{"name":"Watchmen", "author":"Alan Moore", "date": 2016},
+
+	{"name":"Purple Hibiscus", "author":"Chimamanda Ngozi Adichie", "date": 2016},
+	{"name":"Hyperion", "author":"Dan Simmons", "series":{"name": "Hyperion Cantos", "book": 1}, "date": 2016},
+	{"name":"The Way of Kings", "author":"Brandon Sanderson", "series":{"name": "The Stormlight Archive", "book": 1}, "date": 2016},
+    {"name":"Words of Radiance", "author":"Brandon Sanderson", "series":{"name": "The Stormlight Archive", "book": 2}, "date": 2016},
+ 	
+ 	{"name":"Prog Rock FAQ", "author":"Will Romano", "date": 2017},
+    {"name":"Frankenstein", "author":"Mary Shelley", "count":2, "date": 2017},
+    {"name":"King Lear", "author":"William Shakespeare", "date": 2017},
+
+	{"name":"The Great Gatsby", "author":"F. Scott Fitzgerald", "date": 2018},	
+    {"name":"One Flew Over the Cuckoo's Nest", "author":"Ken Kesey", "count": 2, "date":2018},
+    {"name":"Flatland", "author":"Edwin Abbott Abbott", "date": 2018},
+
+    {"name":"Jojo's Bizarre Adventure: Vento Aureo", "author":"Hirohiko Araki", "series":{"name":"Jojo's Bizarre Adventure", "book": 5}, "date": 2018},
+	
+	{"name":"Mob Psycho 100", "author":"ONE", "date": 2019},
     {"name":"Othello", "author":"William Shakespeare", "date": 2019},
 	{"name":"Americanah", "author":"Chimamanda Ngozi Adichie", "count":2, "date": 2019},
 
@@ -644,9 +764,8 @@ let books = [
 	{"name":"Born a Crime", "author":"Trevor Noah", "date": 2019}, 
 	{"name":"Because Internet", "author":"Gretchen McCulloch", "date": 2019},
 	{"name":"Persepolis", "author":"Marjane Satrapi", "count":2, "date": 2019},
-	{"name":"What If?", "author":"Randall Munroe", "count":3, "date": 2019},
 	{"name":"Blood, Sweat, and Pixels: The Triumphant, Turbulent Stories Behind How Video Games Are Made", "author":"Jason Schreier", "date": 2019},
-    
+
     {"name":"Good Omens", "author":"Terry Pratchett and Neil Gaiman", "date": 2020},
     {"name":"The Colour of Magic", "author":"Terry Pratchett", "series":{"name":"Discworld", "book":1}, "date": 2020},
     {"name":"Foundation", "author":"Isaac Asimov", "series":{"name":"Foundation", "book":1}, "date": 2020},
@@ -674,5 +793,8 @@ let books = [
     {"name":"Brain on Fire: My Month of Madness", "author":"Susannah Cahalan", "date": 2021},
     {"name":"My Brilliant Friend", "author":"Elena Ferrante", "series":{"name":"Neopolitan Novels", "book":1}, "date": "2021-01-15"},
     {"name":"Moving Pictures", "author":"Terry Pratchett", "series":{"name":"Discworld", "book":10}, "date": "2021-01-23"},
-    {"name":"Manifesto of the Communist Party", "author":"Karl Marx and Friedrich Engels", "date":"2021-01-24"}
+    {"name":"Manifesto of the Communist Party", "author":"Karl Marx and Friedrich Engels", "date":"2021-01-24"},
+    {"name":"Reaper Man", "author":"Terry Pratchett", "series":{"name":"Discworld", "book":11}, "date": "2021-01-31"},
+
+    {"name":"The Story of a New Name", "author":"Elena Ferrante", "series":{"name":"Neopolitan Novels", "book":2}, "date": "2021-02-08"}
 ]

@@ -25,7 +25,7 @@ const nameSort = (a, b) => {
 window.onload = () => {
     movies.sort(nameSort)
     tv.sort(nameSort)
-    books.sort(nameSort)
+    // books.sort(nameSort)
     
     movies.forEach(m => {
         const elem = document.createElement("li")
@@ -94,21 +94,30 @@ window.onload = () => {
     })
 
     books.reverse().forEach(b => {
-        const n = document.createElement("li")
-        
-        n.textContent = b.name + " ["
-        const sn = document.createElement("span")
-        if(!('series' in b)) b['series'] = {'name':"", "book":""}
-        else if(typeof b['series'] == "string") b['series'] = {'name':b['series'], "book":""}
+        if(typeof b != 'string') {
+            const n = document.createElement("li")
+            
+            n.textContent = b.name + " ["
+            const sn = document.createElement("span")
+            if(!('series' in b)) b['series'] = {'name':"", "book":""}
+            else if(typeof b['series'] == "string") b['series'] = {'name':b['series'], "book":""}
 
-        sn.textContent = [b['author'], b['series']['name'], b['series']['book']].filter(p => !!p).join(" | ")
+            sn.textContent = [b['author'], b['series']['name'], b['series']['book']].filter(p => !!p).join(" | ")
 
-        n.appendChild(sn)
-        const tn = document.createTextNode("]")
-        n.appendChild(tn)
-        n.setAttribute("class", "book_item item")
-        n.setAttribute("data-name", (b.name).toLowerCase() + " " + b.series['name'].toLowerCase() + " " + b.author.toLowerCase())
-        bookList.appendChild(n)
+            n.appendChild(sn)
+            const tn = document.createTextNode("]")
+            n.appendChild(tn)
+            n.setAttribute("class", "book_item item")
+            n.setAttribute("data-name", b.name.toLowerCase() + " " + b.series['name'].toLowerCase() + " " + b.author.toLowerCase())
+            bookList.appendChild(n)
+        } else {
+            const hr = document.createElement("hr")
+            const header = document.createElement("h3")
+            header.textContent = b
+            
+            bookList.appendChild(hr)
+            bookList.appendChild(header)
+        }
     })   
 
     tvDiv.style.display = "block"
@@ -119,7 +128,7 @@ window.onload = () => {
 
 function filterItems() {
     const items = document.getElementsByClassName("item")
-    if(searchbar.value == "") {
+    if(searchbar.value === "") {
         for(let i = 0; i < items.length; i++) {
             items[i].style.display = "list-item"
         }
@@ -135,7 +144,7 @@ function filterItems() {
 }
 
 document.getElementById("movie_button").addEventListener("click", function() {
-   if(movieDiv.style.display == "none") {
+   if(movieDiv.style.display === "none") {
        movieDiv.style.display = "block"
        tvDiv.style.display = "none"
        bookDiv.style.display = "none"
@@ -143,7 +152,7 @@ document.getElementById("movie_button").addEventListener("click", function() {
 })
 
 document.getElementById("tv_button").addEventListener("click", function() {
-    if(tvDiv.style.display == "none") {
+    if(tvDiv.style.display === "none") {
         tvDiv.style.display = "block"
         movieDiv.style.display = "none"
         bookDiv.style.display = "none"
@@ -151,7 +160,7 @@ document.getElementById("tv_button").addEventListener("click", function() {
 })
 
 document.getElementById("book_button").addEventListener("click", function() {
-    if(bookDiv.style.display == "none") {
+    if(bookDiv.style.display === "none") {
         tvDiv.style.display = "none"
         movieDiv.style.display = "none"
         bookDiv.style.display = "block"
