@@ -1,23 +1,32 @@
-var rounds = ["2G", "1G 1R", "2R", "3G", "2G 1R", "2R 1G", "4G", "3R"]
-var playerCount = 4;
+const rounds = ["2G", "1G 1R", "2R", "3G", "2G 1R", "2R 1G", "4G", "3R"]
+let playerCount = 5;
 
-var scoresheet = document.getElementById("scoresheet");
-var playerChanger = document.getElementById("player_changer")
-
+const scoresheet = document.getElementById("scoresheet");
+const playerChanger = document.getElementById("player_count");
 
 window.onload = function() {
     setupScoresheet();
     setupListeners();
+    
+    changePlayers(3)
     updatePlayerNames();
 }
 
-playerChanger.addEventListener("change", function(){
-    if(playerChanger.checked) {
-        changePlayers(4);
-    } else {
-        changePlayers(3);
+playerChanger.addEventListener("change", (e) => {
+    let proposed = Math.floor(parseInt(e.target.value));
+    if(Number.isNaN(proposed)) {
+        playerChanger.value = playerCount;
+        proposed = playerCount;
+        return;
+    } else if(proposed > 5) {
+        playerChanger.value = 5;
+        proposed = 5;
+    } else if(proposed < 3) {
+        playerChanger.value = 3;
+        proposed = 3;
     }
-
+    
+    changePlayers(proposed);
     updatePlayerNames();
 })
 
@@ -40,7 +49,7 @@ function setupScoresheet() {
             }
         }
 
-        roundCell.innerHTML = rounds[i] + " (" + ((cardCount < 10) ? (10) : cardCount) + " Cards)"
+        roundCell.innerHTML = rounds[i] + " (" + ((cardCount < 10) ? (10) : cardCount) + ")"
         newRound.appendChild(roundCell)
         
         let playerCells = []
@@ -81,20 +90,31 @@ function setupScoresheet() {
 function updatePlayerNames() {
     let dealCells = document.getElementsByClassName("player_deal")
     for(let i = 0; i < dealCells.length; i++) {
-        if(playerChanger.checked) dealCells[i].innerHTML = document.getElementById("p"+((i%4)+1)+"_name").value
-        else dealCells[i].innerHTML = dealCells[i].innerHTML = document.getElementById("p"+((i%3)+1)+"_name").value
+        dealCells[i].innerHTML = document.getElementById("p"+((i%playerCount)+1)+"_name").value
     }
 }
 
 function changePlayers(count) {
-    let fourthCells = document.querySelectorAll("#scoresheet tr > td:nth-child(5)");
-
-    for(let i = 0; i < fourthCells.length; i++) {
-        fourthCells[i].style.display = (count == 3 || !count) ? ("none") : ("table-cell");
+    let fourCells = document.querySelectorAll("#scoresheet tr > td:nth-child(5)");
+    let fiveCells = document.querySelectorAll("#scoresheet tr > td:nth-child(6)");
+    switch(count) {
+        case 5:
+            Array.from(fiveCells).forEach(c => c.style.display = "table-cell");
+            break;
+        case 4:
+            Array.from(fourCells).forEach(c => c.style.display = "table-cell");
+            Array.from(fiveCells).forEach(c => c.style.display = "none");
+            break;
+        case 3:
+            Array.from(fourCells).forEach(c => c.style.display = "none");
+            Array.from(fiveCells).forEach(c => c.style.display = "none");
+            break;
     }
-    
-    document.getElementById("player_header").setAttribute("colspan", (count == 3 || !count) ? (3) : (4))
-    document.getElementById("player_4").style.display = (count == 3 || !count) ? ("none") : ("table-cell")
+
+    document.getElementById("player_header").setAttribute("colspan", count);
+    document.getElementById("player_4").style.display = count > 3 ? "table-cell" : "none";
+    document.getElementById("player_5").style.display = count > 4 ? "table-cell" : "none";
+    playerCount = count;
 }
 
 function setupListeners() {

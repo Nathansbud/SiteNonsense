@@ -14,8 +14,7 @@ th, td {
     border: 1px solid black;
 }
 
-
-th input[type="text"], th input[type="number"], td input[type="text"], td input[type="number"]{
+th input[type="text"], td input[type="text"], td input[type="number"]{
     text-align: center;
     min-width: 10%;
     max-width: 100%;
