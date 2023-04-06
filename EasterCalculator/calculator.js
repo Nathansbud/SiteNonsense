@@ -37,11 +37,13 @@ function setDateText(value) {
 
     dateText.textContent = value
     
-    if(yearSelect.value < new Date().getFullYear()) fallsText.textContent = "fell"
-    else if(yearSelect.value > new Date().getFullYear()) fallsText.textContent = "falls"
+    const td = new Date()
+
+    if(yearSelect.value < td.getFullYear()) fallsText.textContent = "fell"
+    else if(yearSelect.value > td.getFullYear()) fallsText.textContent = "falls"
     else {
         let now = new Date()
-        value = value + ", 2020"
+        value = value + `, ${td.getFullYear()}`
         if(Date.parse(value) - now >= 0) {
             fallsText.textContent = "falls"
         } else if(Date.parse(value) - now > -86400000) {

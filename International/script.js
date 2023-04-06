@@ -26,6 +26,8 @@ playerChanger.addEventListener("change", (e) => {
         proposed = 3;
     }
     
+    console.log(proposed);
+
     changePlayers(proposed);
     updatePlayerNames();
 })
@@ -99,6 +101,7 @@ function changePlayers(count) {
     let fiveCells = document.querySelectorAll("#scoresheet tr > td:nth-child(6)");
     switch(count) {
         case 5:
+            Array.from(fourCells).forEach(c => c.style.display = "table-cell");
             Array.from(fiveCells).forEach(c => c.style.display = "table-cell");
             break;
         case 4:
